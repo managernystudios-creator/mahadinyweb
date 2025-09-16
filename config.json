@@ -1,12 +1,7 @@
 {
   "siteTitle": "NY Studios",
-  "logo": {
-    "url": "https://media.discordapp.net/attachments/1289108911583924240/1416850626565898251/NY_LOGO.png?ex=68ca52b9&is=68c90139&hm=247a833b66d608c682c547b0a7777125ad190beb54e0716eb56a304650709115&=&format=webp&quality=lossless&width=544&height=544",
-    "width": "64px",
-    "height": "64px",
-    "showText": false,
-    "altText": "NY Studios Logo"
-  },
+  "siteLogoUrl": "https://media.discordapp.net/attachments/1289108911583924240/1416850626565898251/NY_LOGO.png?ex=68ca52b9&is=68c90139&hm=247a833b66d608c682c547b0a7777125ad190beb54e0716eb56a304650709115&=&format=webp&quality=lossless&width=544&height=544",
+  "siteLogoHeight": "70px",
   "theme": {
     "colors": {
       "background": "210 11% 7%",
@@ -50,17 +45,46 @@
     "title": "Professional Video Editing",
     "subtitle": "& Content Creation",
     "description": "Transform your content with professional video editing, eye-catching thumbnails, and custom graphics that drive engagement and growth.",
+    "tools": [
+      { "label": "Pr", "title": "Adobe Premiere Pro", "className": "pr" },
+      { "label": "Ae", "title": "Adobe After Effects", "className": "ae" },
+      { "label": "Ps", "title": "Adobe Photoshop", "className": "ps" },
+      { "label": "Ai", "title": "Adobe Illustrator", "className": "ai" },
+      { "label": "Id", "title": "Adobe InDesign", "className": "id" },
+      { "label": "Au", "title": "Adobe Audition", "className": "au" }
+    ],
     "stats": [
       { "number": "300+", "label": "Videos Edited" },
       { "number": "50M+", "label": "Views Generated" },
       { "number": "7+", "label": "Years of Experience" }
     ],
     "trustedBrands": [
-      { "logo": "NY", "name": "NY Studios", "subs": "50K Subs" },
-      { "logo": "GG", "name": "Gaming Guru", "subs": "100K Subs" },
-      { "logo": "VE", "name": "Video Experts", "subs": "75K Subs" },
-      { "logo": "CT", "name": "Content Team", "subs": "60K Subs" },
-      { "logo": "ME", "name": "Media Empire", "subs": "200K Subs" }
+      { "name": "Classified Sponge", "logoUrl": "", "ytUrl": "https://www.youtube.com/@ClassifiedSpongeAI", "subs": "1.22M Subs" },
+      { "name": "Agent Stone", "logoUrl": "", "ytUrl": "https://www.youtube.com/@AgentStoneYT", "subs": "2.34K Subs" },
+      { "name": "Vixerz", "logoUrl": "", "ytUrl": "https://www.youtube.com/@VixerzRBLX", "subs": "N/A" },
+      { "name": "MrTempoFitness", "logoUrl": "", "ytUrl": "https://www.youtube.com/@MrTempoFitness", "subs": "N/A" },
+      { "name": "HISHAM", "logoUrl": "", "ytUrl": "https://www.youtube.com/@HISHAMtalksaboutANIME", "subs": "N/A" },
+      { "name": "CrayLabs", "logoUrl": "", "ytUrl": "https://www.youtube.com/@CrayLabs", "subs": "6.47K Subs" },
+      { "name": "The Villain Catcher", "logoUrl": "", "ytUrl": "https://www.youtube.com/@TheVillainCatcher", "subs": "23.7K Subs" },
+      { "name": "NoobTM", "logoUrl": "", "ytUrl": "https://www.youtube.com/@noobtm", "subs": "35.2K Subs" },
+      { "name": "Animation Detective", "logoUrl": "", "ytUrl": "https://www.youtube.com/@TheAnimationDetective", "subs": "7.9K Subs" },
+      { "name": "chacer", "logoUrl": "", "ytUrl": "https://www.youtube.com/@chacer", "subs": "N/A" },
+      { "name": "CiofaloPlays", "logoUrl": "", "ytUrl": "https://www.youtube.com/@CiofaloPlays", "subs": "298 Subs" },
+      { "name": "Asbond", "logoUrl": "", "ytUrl": "https://www.youtube.com/@Asbond", "subs": "124K Subs" },
+      { "name": "fiveay", "logoUrl": "", "ytUrl": "https://www.youtube.com/@fiveay", "subs": "N/A" },
+      { "name": "davidfn", "logoUrl": "", "ytUrl": "https://www.youtube.com/@davidfnx", "subs": "130K Subs" },
+      { "name": "daaavidmc", "logoUrl": "", "ytUrl": "https://www.youtube.com/@daaavidmc", "subs": "88.4K Subs" },
+      { "name": "marino", "logoUrl": "", "ytUrl": "https://www.youtube.com/@marinoo", "subs": "156K Subs" },
+      { "name": "MerosRBX", "logoUrl": "", "ytUrl": "https://www.youtube.com/@MerosRBX/", "subs": "N/A" },
+      { "name": "BeenTaken", "logoUrl": "", "ytUrl": "https://www.youtube.com/@BeenTaken", "subs": "N/A" },
+      { "name": "AyAmir", "logoUrl": "", "ytUrl": "https://www.youtube.com/@AyAmir.", "subs": "N/A" },
+      { "name": "MrDsb", "logoUrl": "", "ytUrl": "https://www.youtube.com/@MrDsb", "subs": "76.7K Subs" },
+      { "name": "MaskedPlayerVIP", "logoUrl": "", "ytUrl": "https://www.youtube.com/@MaskedPlayerVIP", "subs": "18.1K Subs" },
+      { "name": "Joynul Abadin", "logoUrl": "", "ytUrl": "https://www.youtube.com/@Joynul_Abadin", "subs": "7.21K Subs" },
+      { "name": "kinGOPoLY", "logoUrl": "", "ytUrl": "https://www.youtube.com/@kinGOPoLY", "subs": "672K Subs" },
+      { "name": "TheToonTycoon", "logoUrl": "", "ytUrl": "https://www.youtube.com/@TheToonTycoon", "subs": "N/A" },
+      { "name": "JSevenOfficial", "logoUrl": "", "ytUrl": "https://www.youtube.com/@JSevenOfficial", "subs": "6.28K Subs" },
+      { "name": "MrGreywolfvr", "logoUrl": "", "ytUrl": "https://www.youtube.com/@MrGreywolfvr", "subs": "N/A" }
     ]
   },
   "videoData": [
@@ -73,6 +97,34 @@
     { "category": "Podcast", "src": "https://drive.google.com/file/d/1mo_FGiGnoXGdxI-6YnwquLWJqF69eMWh/preview", "title": "The Creator Economy (Podcast)" },
     { "category": "Podcast", "src": "https://www.youtube.com/embed/zO-h5M04oaM", "title": "Interview with a Pro Gamer" }
   ],
+    "whyUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "A dedicated partner vs. the unpredictability of the open market.",
+    "comparisonBoxes": [
+      {
+        "type": "pro",
+        "title": "With NY Studios",
+        "points": [
+          "<strong>Consistent Quality:</strong> Get the same high-quality editing, style, and branding every single time.",
+          "<strong>Dedicated Team:</strong> We understand your brand and vision, saving you time on repetitive explanations.",
+          "<strong>Unlimited Revisions:</strong> We're not happy until you are. Your satisfaction is our priority.",
+          "<strong>Reliable Turnaround:</strong> Predictable and fast delivery times so you can stick to your content schedule.",
+          "<strong>All-in-One Service:</strong> Video editing, thumbnails, graphics, and strategy under one roof."
+        ]
+      },
+      {
+        "type": "con",
+        "title": "Hiring Freelancers / DIY",
+        "points": [
+          "<strong>Inconsistent Results:</strong> Quality and style can vary wildly between different freelancers.",
+          "<strong>Communication Hassles:</strong> Wasted time re-explaining your needs and brand for every new project.",
+          "<strong>Limited Revisions:</strong> Often comes with extra costs or strict limits, forcing you to compromise.",
+          "<strong>Unpredictable Availability:</strong> Freelancers can get busy or disappear, disrupting your workflow.",
+          "<strong>Time Consuming:</strong> Juggling multiple people for different tasks or spending hours editing yourself."
+        ]
+      }
+    ]
+  },
   "shortFormData": [
   { "src": "https://youtube.com/embed/D2Be1XgsJLI?feature=share" },
   { "src": "https://youtube.com/embed/QHcJsMO60oI?feature=share" },
@@ -105,24 +157,38 @@
     }
   ],
   "testimonials": [
-    { "text": "Amazing editing! NY Studios took my videos to the next level. Their attention to detail and creative approach has significantly increased my engagement and subscriber count.", "author": "Kingopoly", "subs": "830K Followers", "avatarUrl": "https://i.pravatar.cc/50?u=kingopoly" },
-    { "text": "Very impressive! You've done a great job and it's clear you put in a lot of effort. The final cut exceeded all my expectations. Highly recommended!", "author": "GamerPro", "subs": "1.2M Subs", "avatarUrl": "https://i.pravatar.cc/50?u=creator2" },
-    { "text": "I absolutely loved your work! It was a pleasure working with you. The communication was seamless and the delivery was prompt.", "author": "TechVibes", "subs": "540K Subs", "avatarUrl": "https://i.pravatar.cc/50?u=creator3" }
+    { "text": "Did a great job editing my minecraft shorts! Great effects and did the style I was going for perfectly. Amazing turn around time and great communication, highly reccomend!", "author": "davidfn", "subs": "130K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/giyLftc5jWMnQlUm3OXmfXABjFtgNgr1C2BymGvS.jpg" },
+    { "text": "Labib is the best editor in the game. Not only does he make insane animations with 50% AVD's on 10 min videos and sometimes even better. He is also super fast and reliable. If a revision is needed he got it fixed like that. He also makes amazing thumbnails. He fully understands what makes a good thumbnail and edit. This is the perfect combination that will solve everything for you!", "author": "Villain Catcher", "subs": "23.7K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/eSkuoQCz0PePIZeBb0p2nUwIrUbmyVQGDnYdH76r.jpg" },
+    { "text": "I've worked with Mosfiqur for about 2 years, He edited all my Minecraft videos and many other projects with great skill and creativity. Always professional, reliable, and easy to communicate with. Highly recommended!", "author": "Teachoble Bangla", "subs": "7.34K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/DnAFgOnSVbq6hAa7pQ1Rgt7yiI8zGzJ11Ill2WUu.jpg" },
+    { "text": "Awesome editor! Made my gaming videos look super clean and fun to watch. Fast, easy to work with, and knows how to keep viewers hooked. Highly recommend!", "author": "Joynul Abadin", "subs": "7.21K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/DluTVjxNnJVdJIsEXQsu5H1hisw1gr65JKVl2O7t.jpg" },
+    { "text": "humble and hardworking guy", "author": "Marino", "subs": "156K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/QImuf6LstUDyVLB85Lt6GW0IdARCq15nGwBG20Wx.jpg" },
+    { "text": "Great Editor", "author": "Asbond", "subs": "124K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/tcM9A7fUNf5ZXWUxnPdl1gGluP0rgswwwntEeK7P.jpg" },
+    { "text": "Great Editor. Efficient and good communication. Def recommended", "author": "Mr. Dsb", "subs": "76.7K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/82CB90v5wm27ZImJekIIDDU4yBQkPDSePU5tnuz0.jpg" },
+    { "text": "Very quick turnaround", "author": "Cray", "subs": "6.47K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/GNyNkXaQPjorSrr4B9yLzNNOHQiN9Ht2Yb0eg2TN.jpg" },
+    { "text": "quick turnaround time.", "author": "J Seven", "subs": "6.28K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/FCFUZ3JusgS64H4NXQbft63YRkrvMP2bYoqYzmxT.jpg" },
+    { "text": "You did amazing job. Well I was looking for skill editor and your are the perfect one for that.", "author": "FIRE-HEART GAMER", "subs": "3.01K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/DAfBOXAT7HsJf2L96yllv5fwXcZITWNGM6TczUL3.jpg" }
   ],
   "faq": [
-    { "question": "What's your turnaround time?", "answer": "Our standard turnaround time is 48-72 hours for most projects. Rush delivery options are available for urgent needs." },
-    { "question": "Do you offer revisions?", "answer": "Yes! We offer unlimited revisions until you're 100% satisfied with the final result. Our goal is your complete happiness with the project." },
-    { "question": "What file formats do you accept?", "answer": "We accept all major video formats including MP4, MOV, AVI, and more. We can also work with cloud storage links from Google Drive, Dropbox, etc. We'll work with whatever you have!" },
-    { "question": "How do I get started?", "answer": "Simply click the Contact Us button, tell us about your project, and we'll get back to you within 24 hours with a custom quote and next steps." }
+    { "question": "What is NY Studios?", "answer": "NY Studios is a creative agency that focuses on video editing, thumbnails, and channel management." },
+    { "question": "How much do you charge?", "answer": "Our pricing depends on your niche, the complexity of the edits, and turnaround time." },
+    { "question": "Do you work on a monthly contract basis?", "answer": "Yes! Message us and book a free 15-minute consultation call to discuss the best plan for you." },
+    { "question": "How do payments work?", "answer": "We take 50% upfront payment before starting a project. This secures your spot in our workflow and motivates us to deliver with extra care and efficiency." },
+    { "question": "What’s your refund policy?", "answer": "We don’t offer refunds unless we cancel a project from our end. Please confirm all details before placing your order." },
+    { "question": "How big is your team?", "answer": "We currently have 5 talented video editors and 2 skilled thumbnail artists. We carefully select only reliable, high-quality editors who bring value to every penny you invest." },
+    { "question": "What is your usual turnaround time?", "answer": "For standard YouTube videos, our typical turnaround is 3-5 business days. Larger or more complex projects may take longer, but we’ll always communicate timelines clearly." },
+    { "question": "How can I order your services?", "answer": "The best way is to email us directly—that’s our most reliable contact method. You can also reach out via Twitter or Instagram if that’s easier for you. Once we receive your message, we’ll get back to you as soon as possible to discuss your project." }
   ],
   "contact": {
     "name": "Labib | TheVinzo",
     "role": "Founder",
-    "bio": "With over 7 years of experience and millions of views generated for our clients, we understand what it takes to make your content stand out.",
+    "avatarUrl": "https://cdn.discordapp.com/attachments/1289108911583924240/1416850211598372924/480753378_1210371713785456_1385830953685240733_n.png?ex=68ca5256&is=68c900d6&hm=ee4c01b217a68bd0b43386dece2635dec72329ae835745bc8641b4581179c28b&",
+    "bio": "When I started this agency, my goal was simple: to bring reliability back into video editing. These days, finding a good editor isn’t the problem, finding a reliable one is. Too often, creators are left hanging when editors disappear without notice. I wanted to change that.\n\nAs a YouTuber myself, with experience managing and growing multiple successful channels, I understand how much effort goes into creating content that actually works with YouTube’s algorithm. That’s why at our agency, we don’t just edit videos, we analyze your channel, your audience, and your content strategy first. Editing is only part of the process. Our real focus is conversion: turning casual viewers into loyal subscribers and customers.\n\nI also believe that quality editing shouldn’t come at an unreasonable price. That’s why we built our agency around providing the best value-for-money services in the market, premium-level editing that helps your channel grow without breaking your budget.\n\nWe don’t just edit. We help you grow.",
     "socials": [
-      { "title": "Twitter", "iconClass": "fab fa-twitter", "url": "#" },
-      { "title": "Discord", "iconClass": "fab fa-discord", "url": "#" },
-      { "title": "Instagram", "iconClass": "fab fa-instagram", "url": "#" }
+      { "title": "X (Twitter)", "iconClass": "fab fa-x-twitter", "url": "https://x.com/nystudios1" },
+      { "title": "Facebook", "iconClass": "fab fa-facebook", "url": "https://www.facebook.com/nystudios1" },
+      { "title": "Email", "iconClass": "fas fa-envelope", "url": "mailto:hire.nystudios@gmail.com" },
+      { "title": "Discord", "iconClass": "fab fa-discord", "url": "https://discord.com/users/nystudios" },
+      { "title": "Instagram", "iconClass": "fab fa-instagram", "url": "https://www.instagram.com/nystudios1_/" }
     ],
     "copyrightYear": "2025"
   }

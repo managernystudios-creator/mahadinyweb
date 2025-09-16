@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             populateGraphics(config.graphics);
             populateTestimonials(config.testimonials);
             populateFaq(config.faq);
+            populateWhyUs(config.whyUs);
             populateContact(config.contact);
             populateShortForm(config.shortFormData);
             
@@ -77,22 +78,16 @@ function applyTheme(theme) {
 
 function populateNavigation(config) {
     document.title = `${config.siteTitle} - Professional Video Editing & Content Creation`;
-    
-    // Handle logo display
-    const logoContainer = document.querySelector('.header .text-2xl');
     const logoLink = document.getElementById('site-logo-link');
-    
-    if (config.logo && config.logo.url && !config.logo.showText) {
-        // Show logo image instead of text
-        logoContainer.innerHTML = `<img src="${config.logo.url}" alt="${config.logo.altText || config.siteTitle}" style="width: ${config.logo.width || 'auto'}; height: ${config.logo.height || 'auto'}; max-height: 40px;">`;
-    } else if (config.logo && config.logo.url && config.logo.showText) {
-        // Show both logo and text
-        logoContainer.innerHTML = `<img src="${config.logo.url}" alt="${config.logo.altText || config.siteTitle}" style="width: ${config.logo.width || 'auto'}; height: ${config.logo.height || 'auto'}; max-height: 32px; margin-right: 8px;"> ${config.siteTitle}`;
+    // Check if both the URL and Height properties exist
+    if (config.siteLogoUrl && config.siteLogoUrl.trim() !== '' && config.siteLogoHeight) {
+        // If a logo URL exists and is not empty, use it
+        // THIS IS THE KEY CHANGE: We use ${config.siteLogoHeight} instead of "32px"
+        logoLink.innerHTML = `<img src="${config.siteLogoUrl}" alt="${config.siteTitle} logo" style="height: ${config.siteLogoHeight}; width: auto;">`;
     } else {
-        // Show only text (fallback)
-        logoContainer.textContent = config.siteTitle;
+        // Otherwise, fall back to the site title text
+        logoLink.innerHTML = `<div class="text-2xl font-bold text-primary">${config.siteTitle}</div>`;
     }
-    
     const mainNav = document.getElementById('main-nav');
     const mobileMenu = document.getElementById('mobile-menu');
     mainNav.innerHTML = ''; // Clear existing links
@@ -110,6 +105,23 @@ function populateHero(heroConfig) {
     document.getElementById('hero-subtitle').textContent = heroConfig.subtitle;
     document.getElementById('hero-description').textContent = heroConfig.description;
 
+    // Tools we master - from config
+    const toolsContainer = document.getElementById('tools-container');
+    if (toolsContainer) {
+        toolsContainer.innerHTML = '';
+        (heroConfig.tools || []).forEach(tool => {
+            // Supports: iconUrl (image), label + className (chip style), or just label
+            if (tool.iconUrl) {
+                toolsContainer.innerHTML += `<div class="chip" title="${tool.title || tool.label || ''}" style="background:#0e0e0e; padding: 0; overflow: hidden;"><img src="${tool.iconUrl}" alt="${tool.title || tool.label || ''}" style="width: 40px; height: 40px; object-fit: contain; display:block;"></div>`;
+            } else {
+                const classes = ['chip'];
+                if (tool.className) classes.push(tool.className);
+                const text = tool.label || (tool.title ? tool.title[0] : '?');
+                toolsContainer.innerHTML += `<div class="${classes.join(' ')}" title="${tool.title || tool.label || ''}">${text}</div>`;
+            }
+        });
+    }
+
     const statsBar = document.getElementById('stats-bar');
     statsBar.innerHTML = '';
     heroConfig.stats.forEach(stat => {
@@ -118,16 +130,23 @@ function populateHero(heroConfig) {
 
     const brandsContainer = document.getElementById('brands-container');
     brandsContainer.innerHTML = '';
-    const duplicatedBrands = [...heroConfig.trustedBrands, ...heroConfig.trustedBrands]; // Duplicate for smooth marquee
+    const duplicatedBrands = [...(heroConfig.trustedBrands || []), ...(heroConfig.trustedBrands || [])];
     duplicatedBrands.forEach(brand => {
-        brandsContainer.innerHTML += `
-            <div class="brand-item">
-                <div class="brand-logo">${brand.logo}</div>
-                <div class="brand-text">
-                    <div class="brand-name">${brand.name}</div>
-                    <div class="brand-subs">${brand.subs}</div>
-                </div>
+        const subs = brand.subs || '';
+        const name = brand.name || '';
+        const initial = name ? name.charAt(0).toUpperCase() : '?';
+        const title = name ? `title="${name}"` : '';
+        const content = `
+            <div class="brand-logo">${initial}</div>
+            <div class="brand-text">
+                <div class="brand-name-box"><span class="brand-name">${name}</span></div>
+                <div class="brand-subs">${subs}</div>
             </div>`;
+        if (brand.ytUrl) {
+            brandsContainer.innerHTML += `<a class="brand-item" href="${brand.ytUrl}" target="_blank" rel="noopener" ${title}>${content}</a>`;
+        } else {
+            brandsContainer.innerHTML += `<div class="brand-item" ${title}>${content}</div>`;
+        }
     });
 }
 
@@ -180,10 +199,71 @@ function populateFaq(faqConfig) {
     });
 }
 
+function populateWhyUs(whyUsConfig) {
+    if (!whyUsConfig) return;
+    const titleEl = document.getElementById('whyus-title');
+    const subtitleEl = document.getElementById('whyus-subtitle');
+    const boxesEl = document.getElementById('whyus-boxes');
+    if (!titleEl || !subtitleEl || !boxesEl) return;
+
+    titleEl.textContent = whyUsConfig.title || '';
+    subtitleEl.textContent = whyUsConfig.subtitle || '';
+
+    boxesEl.innerHTML = '';
+    (whyUsConfig.comparisonBoxes || []).forEach(box => {
+        const isPro = (box.type || '').toLowerCase() === 'pro';
+        const cardBorder = isPro ? 'hsl(var(--primary))' : 'hsl(var(--border))';
+        const titleColor = isPro ? 'hsl(var(--primary))' : 'hsl(var(--foreground))';
+        const glow = isPro ? '0 0 20px hsl(var(--primary) / 0.3)' : 'var(--shadow-card)';
+
+        const card = document.createElement('div');
+        card.className = 'card p-8';
+        card.style.borderColor = cardBorder;
+        card.style.boxShadow = glow;
+        card.innerHTML = `
+            <h3 class="text-2xl font-bold mb-4" style="color:${titleColor}">${box.title || ''}</h3>
+            <ul style="list-style: none; padding-left: 0; display: grid; gap: 0.75rem;">
+                ${(box.points || []).map(p => `<li>${p}</li>`).join('')}
+            </ul>
+        `;
+        boxesEl.appendChild(card);
+    });
+}
+
 function populateContact(contactConfig) {
     document.getElementById('founder-name').textContent = contactConfig.name;
     document.getElementById('founder-role').textContent = contactConfig.role;
-    document.getElementById('founder-bio').textContent = contactConfig.bio;
+    const bioEl = document.getElementById('founder-bio');
+    const fullBio = contactConfig.bio || '';
+    const bioHtml = (fullBio || '').replace(/\n/g, '<br>');
+    bioEl.innerHTML = bioHtml;
+
+    // Always add Read more / Show less toggle (default collapsed)
+    bioEl.classList.add('collapsed');
+    let isCollapsed = true;
+    const toggleBtn = document.createElement('button');
+    toggleBtn.type = 'button';
+    toggleBtn.className = 'bio-toggle';
+    toggleBtn.textContent = 'Read more';
+    toggleBtn.addEventListener('click', () => {
+        isCollapsed = !isCollapsed;
+        bioEl.classList.toggle('collapsed', isCollapsed);
+        toggleBtn.textContent = isCollapsed ? 'Read more' : 'Show less';
+    });
+    bioEl.after(toggleBtn);
+
+    // --- CHANGE START: Populate founder avatar ---
+    const avatarContainer = document.getElementById('founder-avatar');
+    if (contactConfig.avatarUrl && contactConfig.avatarUrl.trim() !== '') {
+        // If an avatar URL is provided, use it
+        avatarContainer.style.background = 'none'; // Remove gradient background
+        avatarContainer.innerHTML = `<img src="${contactConfig.avatarUrl}" alt="${contactConfig.name}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">`;
+    } else {
+        // Fallback to the first initial of the name
+        const initial = contactConfig.name ? contactConfig.name.charAt(0).toUpperCase() : '';
+        avatarContainer.textContent = initial;
+    }
+    // --- CHANGE END ---
 
     const socialLinks = document.getElementById('social-links');
     socialLinks.innerHTML = '';
@@ -350,14 +430,65 @@ function initializePage(config) {
     let lastScrollY = 0;
     window.addEventListener('scroll', () => { const scrollY = window.scrollY; if (scrollY > lastScrollY && scrollY > 50) waterLayer.classList.add('drain'), waterLayer.classList.remove('splash'); else if (scrollY < lastScrollY) waterLayer.classList.add('splash'), waterLayer.classList.remove('drain'); if (scrollY < 10) waterLayer.classList.add('splash'), waterLayer.classList.remove('drain'); lastScrollY = scrollY; });
 
-    // --- Drag to scroll for Testimonial Carousel ONLY ---
+    // --- Auto ping-pong for Testimonial Carousel + custom range scrollbar ---
     const testimonialCarousel = document.querySelector('.testimonial-carousel');
     if (testimonialCarousel) {
-        let isDown = false, startX, scrollLeft;
-        testimonialCarousel.addEventListener('mousedown', (e) => { isDown = true; startX = e.pageX - testimonialCarousel.offsetLeft; scrollLeft = testimonialCarousel.scrollLeft; });
-        testimonialCarousel.addEventListener('mouseleave', () => { isDown = false; });
-        testimonialCarousel.addEventListener('mouseup', () => { isDown = false; });
-        testimonialCarousel.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - testimonialCarousel.offsetLeft; const walk = (x - startX) * 2; testimonialCarousel.scrollLeft = scrollLeft - walk; });
+        let rafId = null;
+        let direction = -1; // -1: right-to-left, 1: left-to-right
+        let speedPxPerSec = 40; // adjusted for smoother motion
+        let lastTs = 0;
+        let paused = false;
+        let resumeTimeoutId = null;
+        const range = document.getElementById('testimonialRange');
+
+        const getMaxScroll = () => Math.max(0, testimonialCarousel.scrollWidth - testimonialCarousel.clientWidth);
+
+        const step = (ts) => {
+            if (paused) { rafId = requestAnimationFrame(step); return; }
+            if (!lastTs) lastTs = ts;
+            const dt = (ts - lastTs) / 1000; // seconds
+            lastTs = ts;
+            const delta = direction * speedPxPerSec * dt;
+            testimonialCarousel.scrollLeft += -delta; // invert because direction -1 means move content left
+            const maxScroll = getMaxScroll();
+            if (testimonialCarousel.scrollLeft <= 0) { testimonialCarousel.scrollLeft = 0; direction = -direction; }
+            else if (testimonialCarousel.scrollLeft >= maxScroll) { testimonialCarousel.scrollLeft = maxScroll; direction = -direction; }
+            // sync range
+            if (range && maxScroll > 0) {
+                const pct = (testimonialCarousel.scrollLeft / maxScroll) * 100;
+                range.value = String(Math.round(pct));
+            }
+            rafId = requestAnimationFrame(step);
+        };
+
+        const startAuto = () => { if (rafId) cancelAnimationFrame(rafId); lastTs = 0; rafId = requestAnimationFrame(step); };
+        const stopAuto = () => { if (rafId) cancelAnimationFrame(rafId); rafId = null; };
+
+        // Do not pause on hover to prevent stutter; just reset timing baseline
+        testimonialCarousel.addEventListener('mouseenter', () => { lastTs = 0; });
+        testimonialCarousel.addEventListener('mouseleave', () => { lastTs = 0; });
+
+        // Range control
+        if (range) {
+            const scheduleResume = () => {
+                if (resumeTimeoutId) clearTimeout(resumeTimeoutId);
+                resumeTimeoutId = setTimeout(() => { paused = false; resumeTimeoutId = null; }, 700);
+            };
+            range.addEventListener('input', () => {
+                paused = true;
+                const maxScroll = getMaxScroll();
+                testimonialCarousel.scrollLeft = (parseInt(range.value, 10) / 100) * maxScroll;
+                lastTs = 0;
+                scheduleResume();
+            });
+            range.addEventListener('mousedown', () => { paused = true; });
+            range.addEventListener('change', () => { scheduleResume(); });
+            range.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+            range.addEventListener('touchend', () => { scheduleResume(); }, { passive: true });
+        }
+        window.addEventListener('resize', () => { /* ensure we bounce properly after resize */ const maxScroll = getMaxScroll(); if (testimonialCarousel.scrollLeft > maxScroll) { testimonialCarousel.scrollLeft = maxScroll; direction = -1; } });
+
+        startAuto();
     }
 
     // --- Stats Counter Animation ---

@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('config.json')
         .then(response => response.json())
         .then(config => {
+            // -- Apply theme first --
+            applyTheme(config.theme);
+            
             // -- Call functions to populate the page with data from config.json --
             populateNavigation(config);
             populateHero(config.hero);
@@ -18,12 +21,77 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error loading config.json:', error));
 });
 
+// --- NEW: Apply Theme Function ---
+function applyTheme(theme) {
+    const root = document.documentElement;
+    
+    // Apply color variables
+    if (theme.colors) {
+        Object.entries(theme.colors).forEach(([key, value]) => {
+            const cssVarName = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+            root.style.setProperty(`--${cssVarName}`, value);
+        });
+    }
+    
+    // Apply typography
+    if (theme.typography) {
+        if (theme.typography.fontFamily) {
+            document.body.style.fontFamily = theme.typography.fontFamily;
+        }
+        if (theme.typography.headingFont) {
+            const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            headings.forEach(heading => {
+                heading.style.fontFamily = theme.typography.headingFont;
+            });
+        }
+    }
+    
+    // Apply layout variables
+    if (theme.layout) {
+        Object.entries(theme.layout).forEach(([key, value]) => {
+            const cssVarName = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+            root.style.setProperty(`--${cssVarName}`, value);
+        });
+    }
+    
+    // Apply navigation styles
+    if (theme.navigation) {
+        const header = document.querySelector('.header');
+        if (header && theme.navigation.backgroundColor) {
+            header.style.background = theme.navigation.backgroundColor;
+        }
+        if (header && theme.navigation.backdropFilter) {
+            header.style.backdropFilter = theme.navigation.backdropFilter;
+        }
+        if (header && theme.navigation.borderColor) {
+            header.style.borderColor = theme.navigation.borderColor;
+        }
+        if (header && theme.navigation.borderRadius) {
+            header.style.borderRadius = theme.navigation.borderRadius;
+        }
+    }
+}
+
 
 // --- NEW: Functions to Populate HTML from JSON ---
 
 function populateNavigation(config) {
     document.title = `${config.siteTitle} - Professional Video Editing & Content Creation`;
-    document.querySelector('.header .text-2xl').textContent = config.siteTitle;
+    
+    // Handle logo display
+    const logoContainer = document.querySelector('.header .text-2xl');
+    const logoLink = document.getElementById('site-logo-link');
+    
+    if (config.logo && config.logo.url && !config.logo.showText) {
+        // Show logo image instead of text
+        logoContainer.innerHTML = `<img src="${config.logo.url}" alt="${config.logo.altText || config.siteTitle}" style="width: ${config.logo.width || 'auto'}; height: ${config.logo.height || 'auto'}; max-height: 40px;">`;
+    } else if (config.logo && config.logo.url && config.logo.showText) {
+        // Show both logo and text
+        logoContainer.innerHTML = `<img src="${config.logo.url}" alt="${config.logo.altText || config.siteTitle}" style="width: ${config.logo.width || 'auto'}; height: ${config.logo.height || 'auto'}; max-height: 32px; margin-right: 8px;"> ${config.siteTitle}`;
+    } else {
+        // Show only text (fallback)
+        logoContainer.textContent = config.siteTitle;
+    }
     
     const mainNav = document.getElementById('main-nav');
     const mobileMenu = document.getElementById('mobile-menu');

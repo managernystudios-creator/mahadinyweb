@@ -44,10 +44,18 @@
     { "category": "thumbnails", "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Vlog Thumbnail", "description": "Eye-catching design for maximum click-through" },
     { "category": "thumbnails", "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Retro Gaming Thumbnail", "description": "Vibrant colors for gaming content" },
     { "category": "graphics", "imageUrl": "https://images.unsplash.com/photo-1633287387306-f08b4b3671c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Product Visualization", "description": "Realistic 3D product rendering" },
-    { "category": "thumbnails", "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "eSports Event Thumbnail", "description": "High-energy design for competitive gaming" },
-    { "category": "thumbnails", "imageUrl": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Tech Tutorial Thumbnail", "description": "Clean and informative for educational content" },
-    { "category": "graphics", "imageUrl": "https://images.unsplash.com/photo-1593405431388-693a02245678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Abstract Background", "description": "Modern 3D abstract graphic for branding" },
-    { "category": "graphics", "imageUrl": "https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Social Media Icons", "description": "Custom branded icons for social platforms" }
+    { 
+      "category": "thumbnails", 
+      "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", 
+      "title": "eSports Event Thumbnail", 
+      "description": "High-energy design for competitive gaming" 
+    },
+    { 
+      "category": "graphics", 
+      "imageUrl": "https://images.unsplash.com/photo-1593405431388-693a02245678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", 
+      "title": "Abstract Background", 
+      "description": "Modern 3D abstract graphic for branding" 
+    }
   ],
   "testimonials": [
     { "text": "Amazing editing! NY Studios took my videos to the next level. Their attention to detail and creative approach has significantly increased my engagement and subscriber count.", "author": "Kingopoly", "subs": "830K Followers", "avatarUrl": "https://i.pravatar.cc/50?u=kingopoly" },

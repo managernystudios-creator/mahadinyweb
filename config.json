@@ -1,0 +1,69 @@
+{
+  "siteTitle": "NY Studios",
+  "navigation": [
+    { "href": "#services", "text": "Services" },
+    { "href": "#graphics", "text": "Graphics" },
+    { "href": "#reviews", "text": "Reviews" },
+    { "href": "#faq", "text": "FAQ" }
+  ],
+  "hero": {
+    "title": "Professional Video Editing",
+    "subtitle": "& Content Creation",
+    "description": "Transform your content with professional video editing, eye-catching thumbnails, and custom graphics that drive engagement and growth.",
+    "stats": [
+      { "number": "300+", "label": "Videos Edited" },
+      { "number": "50M+", "label": "Views Generated" },
+      { "number": "7+", "label": "Years of Experience" }
+    ],
+    "trustedBrands": [
+      { "logo": "NY", "name": "NY Studios", "subs": "50K Subs" },
+      { "logo": "GG", "name": "Gaming Guru", "subs": "100K Subs" },
+      { "logo": "VE", "name": "Video Experts", "subs": "75K Subs" },
+      { "logo": "CT", "name": "Content Team", "subs": "60K Subs" },
+      { "logo": "ME", "name": "Media Empire", "subs": "200K Subs" }
+    ]
+  },
+  "videoData": [
+    { "category": "Documentary", "src": "https://www.youtube.com/embed/tm97qJeZ9Po", "title": "The Dark Side of the Industry" },
+    { "category": "Documentary", "src": "https://www.youtube.com/embed/bVnUcMduThc", "title": "Uncovering the Truth" },
+    { "category": "Documentary", "src": "https://www.youtube.com/embed/f8jSJcdl9ck", "title": "Story of a Content Creator" },
+    { "category": "Gaming", "src": "https://www.youtube.com/embed/xpuc3fZ_py0", "title": "Epic Gameplay Montage" },
+    { "category": "Gaming", "src": "https://www.youtube.com/embed/-6fWp-1WdJ0", "title": "Funny Moments in Gaming" },
+    { "category": "Gaming", "src": "https://www.youtube.com/embed/s7--ZsxC6qc", "title": "Pro Strategy Guide" },
+    { "category": "Podcast", "src": "https://drive.google.com/file/d/1mo_FGiGnoXGdxI-6YnwquLWJqF69eMWh/preview", "title": "The Creator Economy (Podcast)" },
+    { "category": "Podcast", "src": "https://www.youtube.com/embed/zO-h5M04oaM", "title": "Interview with a Pro Gamer" }
+  ],
+  "shortFormData": [
+    { "src": "https://www.youtube.com/embed/1qGxEN29Jfw" },
+    { "src": "https://www.youtube.com/embed/D2Be1XgsJLI" },
+    { "src": "https://www.youtube.com/embed/QHcJsMO60oI" },
+    { "src": "https://www.youtube.com/embed/izgNw8-zEDc" }
+  ],
+  "graphics": [
+    { "category": "thumbnails", "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "YouTube Thumbnail", "description": "Eye-catching design for maximum click-through" },
+    { "category": "thumbnails", "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Gaming Channel Art", "description": "Vibrant colors for gaming content" },
+    { "category": "graphics", "imageUrl": "https://images.unsplash.com/photo-1633287387306-f08b4b3671c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80", "title": "Product Visualization", "description": "Realistic 3D product rendering" }
+  ],
+  "testimonials": [
+    { "text": "Amazing editing! NY Studios took my videos to the next level. Their attention to detail and creative approach has significantly increased my engagement and subscriber count.", "author": "Kingopoly", "subs": "830K Followers", "avatarUrl": "https://i.pravatar.cc/50?u=kingopoly" },
+    { "text": "Very impressive! You've done a great job and it's clear you put in a lot of effort. The final cut exceeded all my expectations. Highly recommended!", "author": "GamerPro", "subs": "1.2M Subs", "avatarUrl": "https://i.pravatar.cc/50?u=creator2" },
+    { "text": "I absolutely loved your work! It was a pleasure working with you. The communication was seamless and the delivery was prompt.", "author": "TechVibes", "subs": "540K Subs", "avatarUrl": "https://i.pravatar.cc/50?u=creator3" }
+  ],
+  "faq": [
+    { "question": "What's your turnaround time?", "answer": "Our standard turnaround time is 48-72 hours for most projects. Rush delivery options are available for urgent needs." },
+    { "question": "Do you offer revisions?", "answer": "Yes! We offer unlimited revisions until you're 100% satisfied with the final result. Our goal is your complete happiness with the project." },
+    { "question": "What file formats do you accept?", "answer": "We accept all major video formats including MP4, MOV, AVI, and more. We can also work with cloud storage links from Google Drive, Dropbox, etc. We'll work with whatever you have!" },
+    { "question": "How do I get started?", "answer": "Simply click the Contact Us button, tell us about your project, and we'll get back to you within 24 hours with a custom quote and next steps." }
+  ],
+  "contact": {
+    "name": "Labib | TheVinzo",
+    "role": "Founder",
+    "bio": "With over 7 years of experience and millions of views generated for our clients, we understand what it takes to make your content stand out.",
+    "socials": [
+      { "title": "Twitter", "iconClass": "fab fa-twitter", "url": "#" },
+      { "title": "Discord", "iconClass": "fab fa-discord", "url": "#" },
+      { "title": "Instagram", "iconClass": "fab fa-instagram", "url": "#" }
+    ],
+    "copyrightYear": "2025"
+  }
+}

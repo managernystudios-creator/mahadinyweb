@@ -201,6 +201,20 @@ function populateContact(contactConfig) {
     socialLinks.innerHTML = socialLinksHTML;
 
     document.getElementById('footer-year').textContent = `© ${contactConfig.copyrightYear} All rights reserved`;
+
+    // Footer logo link + image from config
+    const footerLogoLink = document.getElementById('footer-logo-link');
+    const footerLogoImg = document.getElementById('footer-logo-img');
+    if (footerLogoLink && footerLogoImg) {
+        footerLogoLink.href = 'https://cdn.discordapp.com/attachments/1289108911583924240/1416850625127514364/ny_3.png?ex=68cc4cf8&is=68cafb78&hm=b8fd2a65313acf01d3af6a71d88c2f43d36149a91da31eea9036de2cb65e1d5f&';
+        footerLogoImg.src = (contactConfig && contactConfig.avatarUrl) ? contactConfig.avatarUrl : (typeof siteLogoUrl !== 'undefined' ? siteLogoUrl : '');
+        // Prefer site logo from config if available
+        try {
+            const rootConfigLogo = window.__siteConfig && window.__siteConfig.siteLogoUrl;
+            if (rootConfigLogo) footerLogoImg.src = rootConfigLogo;
+        } catch (e) {}
+        footerLogoImg.alt = 'NY Studios logo';
+    }
 }
 
 function populateShortForm(shortFormConfig) {

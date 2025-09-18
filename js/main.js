@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('config.json')
         .then(response => response.json())
         .then(config => {
+            // expose for modules that may read it
+            window.__siteConfig = config;
             // Apply theme first
             applyTheme(config.theme);
             

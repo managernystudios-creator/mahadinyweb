@@ -145,9 +145,6 @@ class Carousel3D {
                         <div class="video-container">
                             <iframe src="${video.src}" style="width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div class="item__info">
-                            <h3 class="item__info__title">${video.title}</h3>
-                        </div>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right"></div>

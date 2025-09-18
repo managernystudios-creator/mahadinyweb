@@ -5,9 +5,17 @@ function populateNavigation(config) {
     const logoLink = document.getElementById('site-logo-link');
     // Check if both the URL and Height properties exist
     if (config.siteLogoUrl && config.siteLogoUrl.trim() !== '' && config.siteLogoHeight) {
-        // If a logo URL exists and is not empty, use it
-        // THIS IS THE KEY CHANGE: We use ${config.siteLogoHeight} instead of "32px"
-        logoLink.innerHTML = `<img src="${config.siteLogoUrl}" alt="${config.siteTitle} logo" style="height: ${config.siteLogoHeight}; width: auto;">`;
+        // If a logo URL exists and is not empty, attempt to use it with graceful fallback on error
+        logoLink.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = config.siteLogoUrl;
+        img.alt = `${config.siteTitle} logo`;
+        img.style.height = config.siteLogoHeight;
+        img.style.width = 'auto';
+        img.onerror = () => {
+            logoLink.innerHTML = `<div class="text-2xl font-bold text-primary">${config.siteTitle}</div>`;
+        };
+        logoLink.appendChild(img);
     } else {
         // Otherwise, fall back to the site title text
         logoLink.innerHTML = `<div class="text-2xl font-bold text-primary">${config.siteTitle}</div>`;
@@ -61,7 +69,8 @@ function populateHero(heroConfig) {
 function populateGraphics(graphicsConfig) {
     const grid = document.getElementById('artwork-grid');
     grid.innerHTML = '';
-    graphicsConfig.forEach(item => {
+    // Only render thumbnails
+    (graphicsConfig || []).filter(item => (item.category || '').toLowerCase() === 'thumbnails').forEach(item => {
         grid.innerHTML += `
             <div class="artwork-card" data-category="${item.category}">
                 <img src="${item.imageUrl}" alt="${item.title}">
@@ -192,6 +201,15 @@ function populateContact(contactConfig) {
             }
         }
         
+        const isDiscord = (item.title || '').toLowerCase() === 'discord' || (item.iconClass || '').includes('fa-discord') || (item.url || '').includes('discord');
+        if (isDiscord) {
+            // Render as plain, non-interactive text (no hover, no click)
+            return `<span class="social-link" style="pointer-events: none; cursor: default;">
+                <i class="${item.iconClass}"></i>
+                <span class="social-text">${displayUrl}</span>
+            </span>`;
+        }
+        
         return `<a href="${item.url}" title="${item.title}" class="social-link">
             <i class="${item.iconClass}"></i>
             <span class="social-text">${displayUrl}</span>
@@ -206,15 +224,47 @@ function populateContact(contactConfig) {
     const footerLogoLink = document.getElementById('footer-logo-link');
     const footerLogoImg = document.getElementById('footer-logo-img');
     if (footerLogoLink && footerLogoImg) {
-        footerLogoLink.href = 'https://cdn.discordapp.com/attachments/1289108911583924240/1416850625127514364/ny_3.png?ex=68cc4cf8&is=68cafb78&hm=b8fd2a65313acf01d3af6a71d88c2f43d36149a91da31eea9036de2cb65e1d5f&';
-        footerLogoImg.src = (contactConfig && contactConfig.avatarUrl) ? contactConfig.avatarUrl : (typeof siteLogoUrl !== 'undefined' ? siteLogoUrl : '');
-        // Prefer site logo from config if available
-        try {
-            const rootConfigLogo = window.__siteConfig && window.__siteConfig.siteLogoUrl;
-            if (rootConfigLogo) footerLogoImg.src = rootConfigLogo;
-        } catch (e) {}
+        const cfg = window.__siteConfig || {};
+        const footerHref = cfg.footerLogoHref || '#';
+        const footerImg = cfg.footerLogoUrl || cfg.siteLogoUrl || '';
+        footerLogoLink.href = footerHref;
+        footerLogoImg.src = footerImg;
         footerLogoImg.alt = 'NY Studios logo';
+        footerLogoImg.onload = () => {
+            footerLogoImg.style.display = 'block';
+        };
+        footerLogoImg.onerror = () => {
+            footerLogoImg.style.display = 'none';
+        };
     }
+}
+
+// Global helper: copy text to clipboard with brief feedback
+window.copyToClipboard = function(text, el) {
+    const write = navigator.clipboard && navigator.clipboard.writeText
+        ? navigator.clipboard.writeText(text)
+        : new Promise((resolve, reject) => {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try { document.execCommand('copy') ? resolve() : reject(); }
+            catch (e) { reject(e); }
+            finally { document.body.removeChild(textarea); }
+        });
+    write.then(() => {
+        if (!el) return;
+        const original = el.innerHTML;
+        el.innerHTML = `<i class="fas fa-check"></i><span class="social-text">Clipboarded</span>`;
+        setTimeout(() => { el.innerHTML = original; }, 1200);
+    }).catch(() => {
+        if (!el) return;
+        const original = el.innerHTML;
+        el.innerHTML = `<i class="fas fa-times"></i><span class="social-text">Copy failed</span>`;
+        setTimeout(() => { el.innerHTML = original; }, 1200);
+    });
 }
 
 function populateShortForm(shortFormConfig) {

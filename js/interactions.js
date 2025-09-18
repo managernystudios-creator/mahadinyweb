@@ -7,6 +7,7 @@ class Navigation {
         this.mobileMenu = document.getElementById('mobile-menu');
         this.sections = document.querySelectorAll('section[id]');
         this.navLinks = document.getElementById('main-nav').querySelectorAll('a.nav-link');
+        this.viewWorkBtn = document.getElementById('view-work-btn');
         
         this.init();
     }
@@ -22,6 +23,10 @@ class Navigation {
         this.mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', this.closeMobileMenu.bind(this));
         });
+
+        if (this.viewWorkBtn) {
+            this.viewWorkBtn.addEventListener('click', this.handleViewWorkClick.bind(this));
+        }
     }
     
     toggleMobileMenu() {
@@ -32,6 +37,18 @@ class Navigation {
     closeMobileMenu() {
         document.body.classList.remove('mobile-nav-open');
         document.body.classList.remove('no-scroll');
+    }
+
+    handleViewWorkClick() {
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+            servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        // Open Gaming category programmatically
+        const gamingBtn = document.querySelector('.category-btn[data-category="Gaming"]');
+        if (gamingBtn) {
+            gamingBtn.click();
+        }
     }
     
     setupScrollObserver() {

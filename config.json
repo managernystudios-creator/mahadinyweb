@@ -75,11 +75,12 @@
                                    "title":  "Adobe Photoshop",
                                    "className":  "ps"
                                },
-                               {
-                                   "label":  "Ai",
-                                   "title":  "Adobe Illustrator",
-                                   "className":  "ai"
-                               },
+                              {
+                                  "label":  "Ai",
+                                  "title":  "Adobe Illustrator",
+                                  "className":  "ai",
+                                  "iconUrl": "assets/tools/adobe-illustrator.svg"
+                              },
                                {
                                    "label":  "Id",
                                    "title":  "Adobe InDesign",

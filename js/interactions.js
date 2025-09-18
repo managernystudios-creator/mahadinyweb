@@ -24,9 +24,7 @@ class Navigation {
             link.addEventListener('click', this.closeMobileMenu.bind(this));
         });
 
-        if (this.viewWorkBtn) {
-            this.viewWorkBtn.addEventListener('click', this.handleViewWorkClick.bind(this));
-        }
+        // No special handler for view-work button since it is now a direct anchor link
     }
     
     toggleMobileMenu() {
@@ -40,14 +38,19 @@ class Navigation {
     }
 
     handleViewWorkClick() {
+        // Prefer the graphics/templates section if present
+        const graphicsSection = document.getElementById('graphics');
         const servicesSection = document.getElementById('services');
-        if (servicesSection) {
-            servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const targetSection = graphicsSection || servicesSection;
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-        // Open Gaming category programmatically
-        const gamingBtn = document.querySelector('.category-btn[data-category="Gaming"]');
-        if (gamingBtn) {
-            gamingBtn.click();
+        // If services is visible, open a category (Gaming preferred)
+        if (servicesSection) {
+            const gamingBtn = document.querySelector('.category-btn[data-category="Gaming"]');
+            const fallbackBtn = document.querySelector('.category-btn');
+            const targetBtn = gamingBtn || fallbackBtn;
+            if (targetBtn) targetBtn.click();
         }
     }
     

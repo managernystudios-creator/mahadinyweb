@@ -364,10 +364,11 @@ class TestimonialCarousel {
     
     setupLoop() {
         const originalHTML = this.carousel.innerHTML;
-        this.carousel.innerHTML = originalHTML + originalHTML;
+        // Create multiple copies to ensure smooth infinite loop
+        this.carousel.innerHTML = originalHTML + originalHTML + originalHTML;
         requestAnimationFrame(() => {
             const total = this.carousel.scrollWidth || 0;
-            this.contentLoopWidth = Math.max(0, Math.floor(total / 2));
+            this.contentLoopWidth = Math.max(0, Math.floor(total / 3));
             this.offsetPx = 0;
             this.applyTransform();
         });
@@ -432,7 +433,7 @@ class TestimonialCarousel {
     
     handleResize() {
         const total = this.carousel.scrollWidth || 0;
-        this.contentLoopWidth = Math.max(0, Math.floor(total / 2));
+        this.contentLoopWidth = Math.max(0, Math.floor(total / 3));
         this.lastTs = 0;
         this.applyTransform();
     }
@@ -452,5 +453,10 @@ function initializeCarousels(videoData) {
     carousel2D = new Carousel2D('#shortFormCarouselContainer');
     
     testimonialCarousel = new TestimonialCarousel();
+    
+    // Auto-open Documentary category by default
+    setTimeout(() => {
+        carousel3D.openVideoCarousel('Documentary');
+    }, 100);
 }
 

@@ -1,0 +1,207 @@
+// UI interactions, effects, and event handlers
+
+// Navigation and mobile menu functionality
+class Navigation {
+    constructor() {
+        this.hamburgerBtn = document.getElementById('hamburger-btn');
+        this.mobileMenu = document.getElementById('mobile-menu');
+        this.sections = document.querySelectorAll('section[id]');
+        this.navLinks = document.getElementById('main-nav').querySelectorAll('a.nav-link');
+        
+        this.init();
+    }
+    
+    init() {
+        this.setupEventListeners();
+        this.setupScrollObserver();
+    }
+    
+    setupEventListeners() {
+        this.hamburgerBtn.addEventListener('click', this.toggleMobileMenu.bind(this));
+        
+        this.mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', this.closeMobileMenu.bind(this));
+        });
+    }
+    
+    toggleMobileMenu() {
+        document.body.classList.toggle('mobile-nav-open');
+        document.body.classList.toggle('no-scroll');
+    }
+    
+    closeMobileMenu() {
+        document.body.classList.remove('mobile-nav-open');
+        document.body.classList.remove('no-scroll');
+    }
+    
+    setupScrollObserver() {
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    const activeLink = document.getElementById('main-nav').querySelector(`a[href="#${id}"]`);
+                    this.navLinks.forEach(link => link.classList.remove('active'));
+                    if(activeLink) { 
+                        activeLink.classList.add('active'); 
+                    }
+                }
+            });
+        }, { root: null, rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+        
+        this.sections.forEach(section => { 
+            sectionObserver.observe(section); 
+        });
+    }
+}
+
+// Artwork filter functionality
+class ArtworkFilter {
+    constructor() {
+        this.filterButtons = document.querySelectorAll('.filter-btn');
+        this.artworkCards = document.querySelectorAll('.artwork-card');
+        
+        this.init();
+    }
+    
+    init() {
+        this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+        this.filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                this.filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                this.filterArtwork(filter);
+            });
+        });
+    }
+    
+    filterArtwork(filter) {
+        this.artworkCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Poison water effect
+class WaterEffect {
+    constructor() {
+        this.waterLayer = document.getElementById('waterLayer');
+        this.lastScrollY = 0;
+        
+        this.init();
+    }
+    
+    init() {
+        this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+    }
+    
+    handleScroll() {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > this.lastScrollY && scrollY > 50) {
+            this.waterLayer.classList.add('drain');
+            this.waterLayer.classList.remove('splash');
+        } else if (scrollY < this.lastScrollY) {
+            this.waterLayer.classList.add('splash');
+            this.waterLayer.classList.remove('drain');
+        }
+        
+        if (scrollY < 10) {
+            this.waterLayer.classList.add('splash');
+            this.waterLayer.classList.remove('drain');
+        }
+        
+        this.lastScrollY = scrollY;
+    }
+}
+
+// Stats counter animation
+class StatsCounter {
+    constructor() {
+        this.statsBar = document.querySelector('.stats-bar');
+        
+        this.init();
+    }
+    
+    init() {
+        if (this.statsBar) {
+            this.setupObserver();
+        }
+    }
+    
+    setupObserver() {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.stat-number').forEach(el => {
+                        if (!el.dataset.animated) {
+                            this.animateCountUp(el);
+                            el.dataset.animated = 'true';
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(this.statsBar);
+    }
+    
+    animateCountUp(el) {
+        const finalValueString = el.textContent;
+        const suffix = finalValueString.replace(/[0-9.]/g, '');
+        const target = parseFloat(finalValueString);
+        
+        if (isNaN(target)) return;
+        
+        let startTimestamp = null;
+        const duration = 2000;
+        
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            const currentValue = Math.floor(easedProgress * target);
+            el.textContent = currentValue + suffix;
+            
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                el.textContent = finalValueString;
+            }
+        };
+        
+        el.textContent = '0' + suffix;
+        window.requestAnimationFrame(step);
+    }
+}
+
+// FAQ toggle functionality
+function toggleFAQ(item) {
+    item.classList.toggle('active');
+    const icon = item.querySelector('.faq-question span');
+    icon.textContent = item.classList.contains('active') ? '−' : '+';
+}
+
+// Initialize all interactions
+function initializeInteractions() {
+    new Navigation();
+    new ArtworkFilter();
+    new WaterEffect();
+    new StatsCounter();
+}
+
+// Make toggleFAQ globally available for onclick attributes
+window.toggleFAQ = toggleFAQ;
+

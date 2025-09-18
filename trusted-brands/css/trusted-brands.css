@@ -1,0 +1,199 @@
+/* Trusted Brands Section Styles */
+
+.trusted-brands {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.trusted-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin-bottom: 30px;
+}
+
+.brands-marquee {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.brands-marquee::before,
+.brands-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.brands-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, hsl(var(--background)), transparent);
+}
+
+.brands-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, hsl(var(--background)), transparent);
+}
+
+.brands-container {
+    display: flex;
+    gap: 48px;
+    animation: scrollLeft 28s linear infinite;
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 240px;
+    background: linear-gradient(135deg, hsl(var(--background) / 0.4), hsl(var(--card) / 0.7));
+    padding: 16px 12px;
+    border-radius: 16px;
+    border: 1px solid hsl(var(--glass-border));
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand-item:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.35);
+    border-color: hsl(var(--primary) / 0.7);
+    background: linear-gradient(135deg, hsl(var(--background) / 0.55), hsl(var(--card) / 0.9));
+}
+
+.brand-item:link,
+.brand-item:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.trusted-brands a,
+.trusted-brands a:hover,
+.trusted-brands a:focus,
+.trusted-brands a:visited {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.trusted-brands a * {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.brand-logo {
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    border: 1px solid hsl(var(--primary) / 0.5);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    color: hsl(var(--primary-foreground));
+    flex-shrink: 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3), inset 0 1px 0 hsl(var(--foreground) / 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-logo::after {
+    content: "";
+    position: absolute;
+    inset: -100% -40% auto auto;
+    height: 200%;
+    width: 60%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.brand-item:hover .brand-logo::after {
+    opacity: 1;
+    transform: rotate(25deg) translateX(-30%);
+}
+
+.brand-item:hover .brand-logo {
+    transform: rotate(-1deg);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.brand-name-box {
+    display: flex;
+    align-items: center;
+}
+
+.brand-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: hsl(var(--foreground));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.brand-subs {
+    font-size: 12px;
+    color: hsl(var(--muted-foreground));
+    font-weight: 500;
+}
+
+/* Animation */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trusted-brands {
+        margin-top: 40px;
+    }
+    
+    .trusted-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .brands-container {
+        gap: 24px;
+    }
+    
+    .brand-item {
+        min-width: 200px;
+        padding: 12px 10px;
+    }
+    
+    .brand-logo {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+    
+    .brand-name {
+        font-size: 13px;
+    }
+    
+    .brand-subs {
+        font-size: 11px;
+    }
+}
+

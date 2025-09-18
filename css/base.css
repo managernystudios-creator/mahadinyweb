@@ -16,6 +16,8 @@
     --radius: 0.75rem;
     --glow-primary: 0 0 30px hsl(var(--primary) / 0.4);
     --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --glass-bg: hsl(var(--card) / 0.4);
+    --glass-border: hsl(var(--border) / 0.5);
 
     --crsl-bg: transparent;
     --box-bg: #0a3d1a;
@@ -117,5 +119,6 @@ body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); 
     .faq-container { grid-template-columns: 1fr; }
     .contact-content { grid-template-columns: 1fr; gap: 40px; }
 }
+
 
 

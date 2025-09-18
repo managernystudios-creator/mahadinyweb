@@ -8,15 +8,12 @@
     <!-- Dependencies from carousel.html -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* moved to external css files */
-    </style>
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" href="css/hero.css"/>
     <link rel="stylesheet" href="css/carousels.css"/>
     <link rel="stylesheet" href="css/sections.css"/>
+    <link rel="stylesheet" href="trusted-brands/css/trusted-brands.css"/>
 
 </head>
 <body>
@@ -229,6 +226,13 @@
         </div>
     </section>
 
-    <script src="script.js" defer></script>
+    <!-- Load scripts in dependency order -->
+    <script src="js/theme.js" defer></script>
+    <script src="trusted-brands/js/trusted-brands.js" defer></script>
+    <script src="js/populate.js" defer></script>
+    <script src="js/carousels.js" defer></script>
+    <script src="js/interactions.js" defer></script>
+    <script src="js/initialize.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

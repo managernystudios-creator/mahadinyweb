@@ -47,7 +47,8 @@ class Carousel3D {
         this.prevBtn3D.addEventListener('click', this.prev3D.bind(this));
         this.nextBtn3D.addEventListener('click', this.next3D.bind(this));
         this.slider3D.addEventListener('mouseenter', () => clearInterval(this.interval3D));
-        this.slider3D.addEventListener('mouseleave', this.timer3D.bind(this));
+        // Disable auto-advance on mouse leave
+        // this.slider3D.addEventListener('mouseleave', this.timer3D.bind(this));
         window.addEventListener('resize', this.resize3D.bind(this));
     }
     
@@ -114,20 +115,16 @@ class Carousel3D {
     }
     
     timer3D() {
+        // Auto-advance disabled
         clearInterval(this.interval3D);
-        this.interval3D = setInterval(() => {
-            this.move3D((this.currIndex3D + 1) % this.items3D.length);
-        }, this.intervalTime3D);
     }
     
     prev3D() {
         this.move3D((this.currIndex3D - 1 + this.items3D.length) % this.items3D.length);
-        this.timer3D();
     }
     
     next3D() {
         this.move3D((this.currIndex3D + 1) % this.items3D.length);
-        this.timer3D();
     }
     
     initCarousel3D(videoData, startIndex = 0) {
@@ -157,7 +154,7 @@ class Carousel3D {
             setTimeout(() => {
                 this.resize3D();
                 this.move3D(this.currIndex3D, false);
-                this.timer3D();
+                // Auto-advance disabled
             }, 50);
         }
     }
@@ -210,7 +207,7 @@ class Carousel2D {
         this.setupClones();
         this.setupEventListeners();
         this.resize();
-        this.timer();
+        // Auto-advance disabled
     }
     
     setupClones() {
@@ -242,7 +239,8 @@ class Carousel2D {
         this.slider.addEventListener('mouseup', this.handleMouseUp.bind(this));
         this.slider.addEventListener('mousemove', this.handleMouseMove.bind(this));
         this.slider.addEventListener('mouseenter', () => clearInterval(this.interval));
-        this.slider.addEventListener('mouseleave', this.timer.bind(this));
+        // Disable auto-advance on mouse leave
+        // this.slider.addEventListener('mouseleave', this.timer.bind(this));
         this.slider.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
         
         window.addEventListener('resize', this.resize.bind(this));
@@ -276,23 +274,18 @@ class Carousel2D {
     }
     
     timer() {
+        // Auto-advance disabled
         clearInterval(this.interval);
-        this.interval = setInterval(() => {
-            // Ping-pong effect: reverse direction at ends
-            if (this.currIndex <= 1) this.direction = 1;
-            else if (this.currIndex >= this.numOriginal) this.direction = -1;
-            this.move(this.currIndex + this.direction);
-        }, this.intervalTime);
     }
     
     next() {
         this.move(this.currIndex + 1);
-        this.timer();
+        // Auto-advance disabled
     }
     
     prev() {
         this.move(this.currIndex - 1);
-        this.timer();
+        // Auto-advance disabled
     }
     
     handleMouseDown(e) {
@@ -334,18 +327,21 @@ class TestimonialCarousel {
         if (!this.carousel) return;
         
         this.rafId = null;
-        this.direction = -1; // -1: right-to-left, 1: left-to-right
         this.speedPxPerSec = 40; // adjusted for smoother motion
         this.lastTs = 0;
         this.paused = false;
         this.resumeTimeoutId = null;
         this.range = document.getElementById('testimonialRange');
+        // Transform-loop state
+        this.offsetPx = 0;
+        this.contentLoopWidth = 0;
         
         this.init();
     }
     
     init() {
         this.setupEventListeners();
+        this.setupLoop();
         this.startAuto();
     }
     
@@ -366,6 +362,17 @@ class TestimonialCarousel {
         window.addEventListener('resize', this.handleResize.bind(this));
     }
     
+    setupLoop() {
+        const originalHTML = this.carousel.innerHTML;
+        this.carousel.innerHTML = originalHTML + originalHTML;
+        requestAnimationFrame(() => {
+            const total = this.carousel.scrollWidth || 0;
+            this.contentLoopWidth = Math.max(0, Math.floor(total / 2));
+            this.offsetPx = 0;
+            this.applyTransform();
+        });
+    }
+    
     getMaxScroll() {
         return Math.max(0, this.carousel.scrollWidth - this.carousel.clientWidth);
     }
@@ -378,20 +385,15 @@ class TestimonialCarousel {
         if (!this.lastTs) this.lastTs = ts;
         const dt = (ts - this.lastTs) / 1000; // seconds
         this.lastTs = ts;
-        const delta = this.direction * this.speedPxPerSec * dt;
-        this.carousel.scrollLeft += -delta; // invert because direction -1 means move content left
-        const maxScroll = this.getMaxScroll();
-        if (this.carousel.scrollLeft <= 0) { 
-            this.carousel.scrollLeft = 0; 
-            this.direction = -this.direction; 
+        const speed = this.speedPxPerSec * dt;
+        this.offsetPx += speed;
+        const loopW = this.contentLoopWidth || 0;
+        if (loopW > 0) {
+            this.offsetPx = ((this.offsetPx % loopW) + loopW) % loopW;
         }
-        else if (this.carousel.scrollLeft >= maxScroll) { 
-            this.carousel.scrollLeft = maxScroll; 
-            this.direction = -this.direction; 
-        }
-        // sync range
-        if (this.range && maxScroll > 0) {
-            const pct = (this.carousel.scrollLeft / maxScroll) * 100;
+        this.applyTransform();
+        if (this.range && loopW > 0) {
+            const pct = (this.offsetPx / loopW) * 100;
             this.range.value = String(Math.round(pct));
         }
         this.rafId = requestAnimationFrame(this.step.bind(this));
@@ -410,8 +412,12 @@ class TestimonialCarousel {
     
     handleRangeInput() {
         this.paused = true;
-        const maxScroll = this.getMaxScroll();
-        this.carousel.scrollLeft = (parseInt(this.range.value, 10) / 100) * maxScroll;
+        const loopW = this.contentLoopWidth || 0;
+        if (loopW > 0) {
+            const pct = Math.min(100, Math.max(0, parseInt(this.range.value, 10) || 0));
+            this.offsetPx = (pct / 100) * loopW;
+            this.applyTransform();
+        }
         this.lastTs = 0;
         this.scheduleResume();
     }
@@ -425,12 +431,14 @@ class TestimonialCarousel {
     }
     
     handleResize() {
-        // ensure we bounce properly after resize
-        const maxScroll = this.getMaxScroll();
-        if (this.carousel.scrollLeft > maxScroll) { 
-            this.carousel.scrollLeft = maxScroll; 
-            this.direction = -1; 
-        } 
+        const total = this.carousel.scrollWidth || 0;
+        this.contentLoopWidth = Math.max(0, Math.floor(total / 2));
+        this.lastTs = 0;
+        this.applyTransform();
+    }
+    
+    applyTransform() {
+        this.carousel.style.transform = `translateX(${-this.offsetPx}px)`;
     }
 }
 

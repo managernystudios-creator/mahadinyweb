@@ -12,6 +12,10 @@ class TrustedBrands {
         this.speedPxPerSec = 40; // match testimonial speed
         this.lastTs = 0;
         this.paused = false;
+
+        // Transform-based infinite scroller state
+        this.offsetPx = 0; // accumulated left translation in pixels
+        this.contentLoopWidth = 0; // half of total content width (we duplicate content)
     }
 
     /**
@@ -42,6 +46,16 @@ class TrustedBrands {
 
         // Disable CSS keyframe animation so JS controls movement
         this.brandsContainer.style.animation = 'none';
+        // Also reset any transform left by CSS animation keyframes
+        this.brandsContainer.style.transform = 'none';
+
+        // Measure content width on next frame (after DOM is updated)
+        requestAnimationFrame(() => {
+            const totalWidth = this.brandsContainer ? this.brandsContainer.scrollWidth : 0;
+            this.contentLoopWidth = Math.max(0, Math.floor(totalWidth / 2));
+            this.offsetPx = 0;
+            this.applyTransform();
+        });
     }
 
     /**
@@ -182,17 +196,16 @@ class TrustedBrands {
         if (!this.lastTs) this.lastTs = ts;
         const dt = (ts - this.lastTs) / 1000;
         this.lastTs = ts;
-        const delta = this.direction * this.speedPxPerSec * dt;
-        this.scroller.scrollLeft += -delta; // invert so -1 moves content left
 
-        const maxScroll = this.getMaxScroll();
-        if (this.scroller.scrollLeft <= 0) {
-            this.scroller.scrollLeft = 0;
-            this.direction = -this.direction;
-        } else if (this.scroller.scrollLeft >= maxScroll) {
-            this.scroller.scrollLeft = maxScroll;
-            this.direction = -this.direction;
+        // Always move left; wrap seamlessly when passing half-width
+        const speed = this.speedPxPerSec * dt;
+        this.offsetPx += speed; // translateX(-offsetPx)
+        const loopW = this.contentLoopWidth || 0;
+        if (loopW > 0) {
+            // Keep offset within [0, loopW)
+            this.offsetPx = ((this.offsetPx % loopW) + loopW) % loopW;
         }
+        this.applyTransform();
 
         this.rafId = requestAnimationFrame(this._boundStep);
     }
@@ -212,12 +225,18 @@ class TrustedBrands {
     }
 
     handleResize = () => {
-        const maxScroll = this.getMaxScroll();
         if (!this.scroller) return;
-        if (this.scroller.scrollLeft > maxScroll) {
-            this.scroller.scrollLeft = maxScroll;
-            this.direction = -1;
-        }
+        // Recompute loop width and keep animation running across zoom/resizes
+        const totalWidth = this.brandsContainer ? this.brandsContainer.scrollWidth : 0;
+        this.contentLoopWidth = Math.max(0, Math.floor(totalWidth / 2));
+        this.lastTs = 0;
+        this.applyTransform();
+        this.restartAuto();
+    }
+
+    applyTransform() {
+        if (!this.brandsContainer) return;
+        this.brandsContainer.style.transform = `translateX(${-this.offsetPx}px)`;
     }
 }
 

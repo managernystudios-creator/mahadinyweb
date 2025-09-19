@@ -206,8 +206,13 @@ function populateContact(contactConfig) {
             }
         }
         
+        // Use image if iconUrl is provided, otherwise use icon class
+        const iconHtml = item.iconUrl
+            ? `<img src="${item.iconUrl}" alt="${item.title}" class="social-icon">`
+            : `<i class="${item.iconClass}"></i>`;
+        
         return `<a href="${item.url}" title="${item.title}" class="social-link">
-            <i class="${item.iconClass}"></i>
+            ${iconHtml}
             <span class="social-text">${displayUrl}</span>
         </a>`;
     }).join('');

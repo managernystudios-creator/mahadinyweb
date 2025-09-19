@@ -56,41 +56,41 @@
                        }
                    ],
     "hero":  {
-                 "title":  "Professional Video Editing",
-                 "subtitle":  "\u0026 Content Creation",
-                 "description":  "Transform your content with professional video editing, eye-catching thumbnails, and custom graphics that drive engagement and growth.",
+                 "title":  "Editing That ",
+                 "subtitle":  "Converts",
+                 "description":  "Designed to boost engagement, maximize ROI, and help you scale your brand faster.",
                  "tools":  [
                                {
                                    "label":  "Pr",
                                    "title":  "Adobe Premiere Pro",
-                                   "className":  "pr"
+                                   "className":  "pr",
+                                   "iconUrl":  "assets/tools/image0.png"
                                },
                                {
                                    "label":  "Ae",
                                    "title":  "Adobe After Effects",
-                                   "className":  "ae"
+                                   "className":  "ae",
+                                   "iconUrl":  "assets/tools/image1.png"
                                },
                                {
                                    "label":  "Ps",
                                    "title":  "Adobe Photoshop",
-                                   "className":  "ps"
+                                   "className":  "ps",
+                                   "iconUrl":  "assets/tools/image2.png"
                                },
                                {
                                    "label":  "Ai",
                                    "title":  "Adobe Illustrator",
                                    "className":  "ai",
-                                   "iconUrl":  "assets/tools/adobe-illustrator.svg"
+                                   "iconUrl":  "assets/tools/image3.png"
+
                                },
-                               {
-                                   "label":  "Id",
-                                   "title":  "Adobe InDesign",
-                                   "className":  "id"
-                               },
-                               {
-                                   "label":  "Au",
-                                   "title":  "Adobe Audition",
-                                   "className":  "au"
-                               }
+                                 {
+                                      "label":  "vinci",
+                                        "title":  "DaVinci Resolve",
+                                        "className":  "davinci",
+                                        "iconUrl":  "assets/tools/image4.png"
+                                 }
                            ],
                  "stats":  [
                                {
@@ -123,19 +123,19 @@
                                            "name":  "Vixerz",
                                            "logoUrl":  "assets/trusted-brands/vixerz.jpg",
                                            "ytUrl":  "https://www.youtube.com/@VixerzRBLX",
-                                           "subs":  "N/A"
+                                           "subs":  "40.1K Subs"
                                        },
                                        {
                                            "name":  "MrTempoFitness",
                                            "logoUrl":  "assets/trusted-brands/mrtempofitness.jpg",
                                            "ytUrl":  "https://www.youtube.com/@MrTempoFitness",
-                                           "subs":  "N/A"
+                                           "subs":  "139 Subs"
                                        },
                                        {
                                            "name":  "HISHAM",
                                            "logoUrl":  "assets/trusted-brands/hisham.jpg",
                                            "ytUrl":  "https://www.youtube.com/@HISHAMtalksaboutANIME",
-                                           "subs":  "N/A"
+                                           "subs":  "81.2K Subs"
                                        },
                                        {
                                            "name":  "CrayLabs",
@@ -165,7 +165,7 @@
                                            "name":  "chacer",
                                            "logoUrl":  "assets/trusted-brands/chacer.jpg",
                                            "ytUrl":  "https://www.youtube.com/@chacer",
-                                           "subs":  "N/A"
+                                           "subs":  "1.64K Subs"
                                        },
                                        {
                                            "name":  "CiofaloPlays",
@@ -183,7 +183,7 @@
                                            "name":  "fiveay",
                                            "logoUrl":  "assets/trusted-brands/fiveay.jpg",
                                            "ytUrl":  "https://www.youtube.com/@fiveay",
-                                           "subs":  "N/A"
+                                           "subs":  "342K Subs"
                                        },
                                        {
                                            "name":  "davidfn",
@@ -207,19 +207,19 @@
                                            "name":  "MerosRBX",
                                            "logoUrl":  "assets/trusted-brands/merosrbx.jpg",
                                            "ytUrl":  "https://www.youtube.com/@MerosRBX/",
-                                           "subs":  "N/A"
+                                           "subs":  "109K Subs"
                                        },
                                        {
                                            "name":  "BeenTaken",
                                            "logoUrl":  "assets/trusted-brands/beentaken.jpg",
                                            "ytUrl":  "https://www.youtube.com/@BeenTaken",
-                                           "subs":  "N/A"
+                                           "subs":  "100K Subs"
                                        },
                                        {
                                            "name":  "AyAmir",
                                            "logoUrl":  "",
                                            "ytUrl":  "https://www.youtube.com/@AyAmir.",
-                                           "subs":  "N/A"
+                                           "subs":  "76.6K Subs"
                                        },
                                        {
                                            "name":  "MrDsb",
@@ -249,7 +249,7 @@
                                            "name":  "TheToonTycoon",
                                            "logoUrl":  "",
                                            "ytUrl":  "https://www.youtube.com/@TheToonTycoon",
-                                           "subs":  "N/A"
+                                           "subs":  "116 Subs"
                                        },
                                        {
                                            "name":  "JSevenOfficial",
@@ -261,7 +261,7 @@
                                            "name":  "MrGreywolfvr",
                                            "logoUrl":  "",
                                            "ytUrl":  "https://www.youtube.com/@MrGreywolfvr",
-                                           "subs":  "N/A"
+                                           "subs":  "61.5K Subs"
                                        }
                                    ]
              },
@@ -317,6 +317,10 @@
                       {
                           "category":  "Gaming",
                           "src":  "https://www.youtube.com/embed/xpuc3fZ_py0"
+                      },
+                      {
+                            "category":  "Gaming",
+                          "src":  "https://www.youtube.com/embed/Xwi-dAa_5vc"
                       },
                       {
                           "category":  "Gaming",
@@ -545,7 +549,7 @@
                         {  
                             "title": "Client Thumbnail 17",
                             "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample17.jpg"
+                            "imageUrl": "assets/thumbnails/sample17.png"
                         },
                         {  
                             "title": "Client Thumbnail 18",
@@ -626,43 +630,8 @@
                             "title": "Client Thumbnail 33",
                             "category": "thumbnails",
                             "imageUrl": "assets/thumbnails/sample33.jpg"
-                        },
-                        {  
-                            "title": "Client Thumbnail 34",
-                            "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample34.jpg"
-                        },
-                        {  
-                            "title": "Client Thumbnail 35",
-                            "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample35.jpg"
-                        },
-                        {  
-                            "title": "Client Thumbnail 36",
-                            "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample36.jpg"
-                        },
-                        {  
-                            "title": "Client Thumbnail 37",
-                            "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample37.jpg"
-                        },
-                        {  
-                            "title": "Client Thumbnail 38",
-                            "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample38.jpg"
-                        },
-                        {  
-                            "title": "Client Thumbnail 39",
-                            "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample39.jpg"
-                        },
-                        {  
-                            "title": "Client Thumbnail 40",
-                            "category": "thumbnails",
-                            "imageUrl": "assets/thumbnails/sample40.jpg"
                         }
-
+                        
                  ],
     "testimonials":  [
                          {
@@ -723,8 +692,69 @@
                              "text":  "You did amazing job. Well I was looking for skill editor and your are the perfect one for that.",
                              "author":  "FIRE-HEART GAMER",
                              "subs":  "3.01K Subs",
-                             "avatarUrl":  "https://storage.ytjobs.co/channel_thumbnails/DAfBOXAT7HsJf2L96yllv5fwXcZITWNGM6TczUL3.jpg"
-                         }
+                             "avatarUrl":  "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                         },
+                         
+                        {
+                            "text": "The editing is clean, professional, and really elevates the content. This editor has a great eye for pacing and storytelling.",
+                            "author": "PixelPulse",
+                            "subs": "50K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "Incredible work! The transitions are seamless and the effects are top-notch. They turned my raw footage into a masterpiece.",
+                            "author": "DigitalNomad",
+                            "subs": "12.5K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "I've worked with many editors, but this one is on another level. They understood my vision perfectly and delivered a final product that exceeded my expectations.",
+                            "author": "TechInnovate",
+                            "subs": "1M Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "Fast, reliable, and incredibly talented. They helped me get my video out on time without sacrificing quality. Highly recommend!",
+                            "author": "GameSensei",
+                            "subs": "250K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "The editing is dynamic and keeps viewers engaged from start to finish. This is exactly what my channel needed to grow.",
+                            "author": "AdrenalineRush",
+                            "subs": "75K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "Communication was excellent and the final edit was flawless. They are a true professional and an asset to any team.",
+                            "author": "MunchieMania",
+                            "subs": "90K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "They have a unique style that makes my videos stand out. The color grading and sound design are top-tier. A true artist!",
+                            "author": "CreativeCritter",
+                            "subs": "15K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "I'm so glad I found this editor. My content has never looked this good. They are worth every penny and then some.",
+                            "author": "DailyDoseOfDank",
+                            "subs": "400K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "From a basic concept to a cinematic masterpiece, this editor worked wonders. I'm completely blown away by their skills.",
+                            "author": "StoryForge Studios",
+                            "subs": "2.1M Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        },
+                        {
+                            "text": "They are a lifesaver! My backlog is gone and my videos are getting more views thanks to their professional touch. A must-hire.",
+                            "author": "QuantumQuests",
+                            "subs": "68K Subs",
+                            "avatarUrl": "https://cdn1.iconfinder.com/data/icons/colored-social-media-set-volume-1/512/youtube-512.png"
+                        }
                      ],
     "faq":  [
                 {
@@ -766,11 +796,7 @@
                     "avatarUrl":  "assets/480753378_1210371713785456_1385830953685240733_n.png",
                     "bio":  "When I started this agency, my goal was simple: to bring reliability back into video editing. These days, finding a good editor isn’t the problem, finding a reliable one is. Too often, creators are left hanging when editors disappear without notice. I wanted to change that.\n\nAs a YouTuber myself, with experience managing and growing multiple successful channels, I understand how much effort goes into creating content that actually works with YouTube’s algorithm. That’s why at our agency, we don’t just edit videos, we analyze your channel, your audience, and your content strategy first. Editing is only part of the process. Our real focus is conversion: turning casual viewers into loyal subscribers and customers.\n\nI also believe that quality editing shouldn’t come at an unreasonable price. That’s why we built our agency around providing the best value-for-money services in the market, premium-level editing that helps your channel grow without breaking your budget.\n\nWe don’t just edit. We help you grow.",
                     "socials":  [
-                                    {
-                                        "title":  "X (Twitter)",
-                                        "iconClass":  "fa-brands fa-x-twitter",
-                                        "url":  "https://x.com/nystudios1"
-                                    },
+
                                     {
                                         "title":  "Facebook",
                                         "iconClass":  "fab fa-facebook",
@@ -784,12 +810,17 @@
                                     {
                                         "title":  "Discord",
                                         "iconClass":  "fab fa-discord",
-                                        "url":  "https://discord.com/users/nystudios"
+                                        "url":  "@nystudios"
                                     },
                                     {
                                         "title":  "Instagram",
                                         "iconClass":  "fab fa-instagram",
                                         "url":  "https://www.instagram.com/nystudios1_/"
+                                    },
+                                    {
+                                        "title":  "Twitter",
+                                        "iconClass":  "fab fa-twitter",
+                                        "url":  "https://x.com/nystudios1"
                                     }
                                 ],
                     "copyrightYear":  "2025"

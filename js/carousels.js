@@ -168,8 +168,8 @@ class Carousel3D {
         const videosForCategory = this.masterVideoData.filter(v => v.category === category);
         this.categoryTitle.textContent = category;
         
-        // Start from subscriber count (last item) if available
-        const startIndex = Math.max(0, videosForCategory.length - 1);
+        // Start with the first video
+        const startIndex = 0;
         this.initCarousel3D(videosForCategory, startIndex);
         
         this.videoCarouselContainer.classList.remove('hidden');

@@ -107,17 +107,20 @@
     font-weight: 500;
     min-width: 0;
 }
-.social-link:hover { 
-    background: hsl(var(--primary)); 
-    color: hsl(var(--primary-foreground)); 
-    transform: translateY(-3px); 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
+.social-link:hover {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
-.social-link i {
+.social-link i,
+.social-link .social-icon {
     font-size: 16px;
     width: 20px;
+    height: 20px;
     text-align: center;
     flex-shrink: 0;
+    object-fit: contain;
 }
 .social-text {
     white-space: nowrap;

@@ -181,7 +181,7 @@
         { "title": "Client Thumbnail 30", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample30.jpg" },
         { "title": "Client Thumbnail 31", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample31.jpg" },
         { "title": "Client Thumbnail 32", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample32.jpg" },
-        { "title": "Client Thumbnail 33", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample33.jpg" },
+        { "title": "Client Thumbnail 33", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample33.jpg" }
     ],
     "testimonials": [
         { "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!", "author": "Classified Sponge", "subs": "1.22M Subs", "avatarUrl": "assets/trusted-brands/classified-sponge.jpg" },

@@ -38,230 +38,56 @@
         }
     },
     "navigation": [
-        {
-            "href": "#services",
-            "text": "Services"
-        },
-        {
-            "href": "#graphics",
-            "text": "Graphics"
-        },
-        {
-            "href": "#reviews",
-            "text": "Reviews"
-        },
-        {
-            "href": "#faq",
-            "text": "FAQ"
-        }
+        { "href": "#services", "text": "Services" },
+        { "href": "#graphics", "text": "Graphics" },
+        { "href": "#reviews", "text": "Reviews" },
+        { "href": "#faq", "text": "FAQ" }
     ],
     "hero": {
         "title": "Editing That ",
         "subtitle": "Converts",
         "description": "Designed to boost engagement, maximize ROI, and help you scale your brand faster.",
         "tools": [
-            {
-                "label": "Pr",
-                "title": "Adobe Premiere Pro",
-                "className": "pr",
-                "iconUrl": "assets/tools/image0.png"
-            },
-            {
-                "label": "Ae",
-                "title": "Adobe After Effects",
-                "className": "ae",
-                "iconUrl": "assets/tools/image1.png"
-            },
-            {
-                "label": "Ps",
-                "title": "Adobe Photoshop",
-                "className": "ps",
-                "iconUrl": "assets/tools/image2.png"
-            },
-            {
-                "label": "Ai",
-                "title": "Adobe Illustrator",
-                "className": "ai",
-                "iconUrl": "assets/tools/image3.png"
-            },
-            {
-                "label": "vinci",
-                "title": "DaVinci Resolve",
-                "className": "davinci",
-                "iconUrl": "assets/tools/image4.png"
-            }
+            { "label": "Pr", "title": "Adobe Premiere Pro", "className": "pr", "iconUrl": "assets/tools/image0.png" },
+            { "label": "Ae", "title": "Adobe After Effects", "className": "ae", "iconUrl": "assets/tools/image1.png" },
+            { "label": "Ps", "title": "Adobe Photoshop", "className": "ps", "iconUrl": "assets/tools/image2.png" },
+            { "label": "Ai", "title": "Adobe Illustrator", "className": "ai", "iconUrl": "assets/tools/image3.png" },
+            { "label": "vinci", "title": "DaVinci Resolve", "className": "davinci", "iconUrl": "assets/tools/image4.png" }
         ],
         "stats": [
-            {
-                "number": "300+",
-                "label": "Videos Edited"
-            },
-            {
-                "number": "50M+",
-                "label": "Views Generated"
-            },
-            {
-                "number": "7+",
-                "label": "Years of Experience"
-            }
+            { "number": "300+", "label": "Videos Edited" },
+            { "number": "50M+", "label": "Views Generated" },
+            { "number": "7+", "label": "Years of Experience" }
         ],
         "trustedBrands": [
-            {
-                "name": "Classified Sponge",
-                "logoUrl": "assets/trusted-brands/classified-sponge.jpg",
-                "ytUrl": "https://www.youtube.com/@ClassifiedSpongeAI",
-                "subs": "1.22M Subs"
-            },
-            {
-                "name": "kinGOPoLY",
-                "logoUrl": "assets/trusted-brands/KinGopoly.jpg",
-                "ytUrl": "https://www.youtube.com/@kinGOPoLY",
-                "subs": "672K Subs"
-            },
-            {
-                "name": "fiveay",
-                "logoUrl": "assets/trusted-brands/fiveay.jpg",
-                "ytUrl": "https://www.youtube.com/@fiveay",
-                "subs": "342K Subs"
-            },
-            {
-                "name": "marino",
-                "logoUrl": "assets/trusted-brands/marino.jpg",
-                "ytUrl": "https://www.youtube.com/@marinoo",
-                "subs": "156K Subs"
-            },
-            {
-                "name": "davidfn",
-                "logoUrl": "assets/trusted-brands/davidfn.jpg",
-                "ytUrl": "https://www.youtube.com/@davidfnx",
-                "subs": "130K Subs"
-            },
-            {
-                "name": "Asbond",
-                "logoUrl": "assets/trusted-brands/asbond.jpg",
-                "ytUrl": "https://www.youtube.com/@Asbond",
-                "subs": "124K Subs"
-            },
-            {
-                "name": "MerosRBX",
-                "logoUrl": "assets/trusted-brands/merosrbx.jpg",
-                "ytUrl": "https://www.youtube.com/@MerosRBX/",
-                "subs": "109K Subs"
-            },
-            {
-                "name": "BeenTaken",
-                "logoUrl": "assets/trusted-brands/beentaken.jpg",
-                "ytUrl": "https://www.youtube.com/@BeenTaken",
-                "subs": "100K Subs"
-            },
-            {
-                "name": "daaavidmc",
-                "logoUrl": "assets/trusted-brands/daaavidmc.jpg",
-                "ytUrl": "https://www.youtube.com/@daaavidmc",
-                "subs": "88.4K Subs"
-            },
-            {
-                "name": "HISHAM",
-                "logoUrl": "assets/trusted-brands/hisham.jpg",
-                "ytUrl": "https://www.youtube.com/@HISHAMtalksaboutANIME",
-                "subs": "81.2K Subs"
-            },
-            {
-                "name": "MrDsb",
-                "logoUrl": "assets/trusted-brands/dsb.jpg",
-                "ytUrl": "https://www.youtube.com/@MrDsb",
-                "subs": "76.7K Subs"
-            },
-            {
-                "name": "AyAmir",
-                "logoUrl": "assets/trusted-brands/amir.jpg",
-                "ytUrl": "https://www.youtube.com/@AyAmir.",
-                "subs": "76.6K Subs"
-            },
-            {
-                "name": "MrGreywolfvr",
-                "logoUrl": "assets/trusted-brands/greywolf.jpg",
-                "ytUrl": "https://www.youtube.com/@MrGreywolfvr",
-                "subs": "61.5K Subs"
-            },
-            {
-                "name": "Vixerz",
-                "logoUrl": "assets/trusted-brands/vixerz.jpg",
-                "ytUrl": "https://www.youtube.com/@VixerzRBLX",
-                "subs": "40.1K Subs"
-            },
-            {
-                "name": "NoobTM",
-                "logoUrl": "assets/trusted-brands/noobtm.jpg",
-                "ytUrl": "https://www.youtube.com/@noobtm",
-                "subs": "35.2K Subs"
-            },
-            {
-                "name": "The Villain Catcher",
-                "logoUrl": "assets/trusted-brands/the-villain-catcher.jpg",
-                "ytUrl": "https://www.youtube.com/@TheVillainCatcher",
-                "subs": "23.7K Subs"
-            },
-            {
-                "name": "MaskedPlayerVIP",
-                "logoUrl": "assets/trusted-brands/maskedPlayer.jpg",
-                "ytUrl": "https://www.youtube.com/@MaskedPlayerVIP",
-                "subs": "18.1K Subs"
-            },
-            {
-                "name": "Animation Detective",
-                "logoUrl": "assets/trusted-brands/animation-detective.jpg",
-                "ytUrl": "https://www.youtube.com/@TheAnimationDetective",
-                "subs": "7.9K Subs"
-            },
-            {
-                "name": "Joynul Abadin",
-                "logoUrl": "assets/trusted-brands/channels4_profile.jpg",
-                "ytUrl": "https://www.youtube.com/@Joynul_Abadin",
-                "subs": "7.21K Subs"
-            },
-            {
-                "name": "CrayLabs",
-                "logoUrl": "assets/trusted-brands/craylabs.jpg",
-                "ytUrl": "https://www.youtube.com/@CrayLabs",
-                "subs": "6.47K Subs"
-            },
-            {
-                "name": "JSevenOfficial",
-                "logoUrl": "assets/trusted-brands/J7.jpg",
-                "ytUrl": "https://www.youtube.com/@JSevenOfficial",
-                "subs": "6.28K Subs"
-            },
-            {
-                "name": "Agent Stone",
-                "logoUrl": "assets/trusted-brands/agent-stone.jpg",
-                "ytUrl": "https://www.youtube.com/@AgentStoneYT",
-                "subs": "Rising Stars"
-            },
-            {
-                "name": "MrTempoFitness",
-                "logoUrl": "assets/trusted-brands/mrtempofitness.jpg",
-                "ytUrl": "https://www.youtube.com/@MrTempoFitness",
-                "subs": "Rising Stars"
-            },
-            {
-                "name": "chacer",
-                "logoUrl": "assets/trusted-brands/chacer.jpg",
-                "ytUrl": "https://www.youtube.com/@chacer",
-                "subs": "Rising Stars"
-            },
-            {
-                "name": "CiofaloPlays",
-                "logoUrl": "assets/trusted-brands/ciofaloplays.jpg",
-                "ytUrl": "https://www.youtube.com/@CiofaloPlays",
-                "subs": "Rising Stars"
-            },
-            {
-                "name": "TheToonTycoon",
-                "logoUrl": "assets/trusted-brands/toonTycoon.jpg",
-                "ytUrl": "https://www.youtube.com/@TheToonTycoon",
-                "subs": "Rising Stars"
-            }
+            { "name": "Classified Sponge", "logoUrl": "assets/trusted-brands/classified-sponge.jpg", "ytUrl": "https://www.youtube.com/@ClassifiedSpongeAI", "subs": "1.22M Subs" },
+            { "name": "kinGOPoLY", "logoUrl": "assets/trusted-brands/KinGopoly.jpg", "ytUrl": "https://www.youtube.com/@kinGOPoLY", "subs": "672K Subs" },
+            { "name": "fiveay", "logoUrl": "assets/trusted-brands/fiveay.jpg", "ytUrl": "https://www.youtube.com/@fiveay", "subs": "342K Subs" },
+            { "name": "marino", "logoUrl": "assets/trusted-brands/marino.jpg", "ytUrl": "https://www.youtube.com/@marinoo", "subs": "156K Subs" },
+            { "name": "Rehan", "logoUrl": "assets/trusted-brands/jiILg0XB_400x400.jpg", "ytUrl": "https://x.com/rehanyt_", "subs": "150K Subs" },
+            { "name": "davidfn", "logoUrl": "assets/trusted-brands/davidfn.jpg", "ytUrl": "https://www.youtube.com/@davidfnx", "subs": "130K Subs" },
+            { "name": "Asbond", "logoUrl": "assets/trusted-brands/asbond.jpg", "ytUrl": "https://www.youtube.com/@Asbond", "subs": "124K Subs" },
+            { "name": "MerosRBX", "logoUrl": "assets/trusted-brands/merosrbx.jpg", "ytUrl": "https://www.youtube.com/@MerosRBX/", "subs": "109K Subs" },
+            { "name": "BeenTaken", "logoUrl": "assets/trusted-brands/beentaken.jpg", "ytUrl": "https://www.youtube.com/@BeenTaken", "subs": "100K Subs" },
+            { "name": "daaavidmc", "logoUrl": "assets/trusted-brands/daaavidmc.jpg", "ytUrl": "https://www.youtube.com/@daaavidmc", "subs": "88.4K Subs" },
+            { "name": "HISHAM", "logoUrl": "assets/trusted-brands/hisham.jpg", "ytUrl": "https://www.youtube.com/@HISHAMtalksaboutANIME", "subs": "81.2K Subs" },
+            { "name": "MrDsb", "logoUrl": "assets/trusted-brands/dsb.jpg", "ytUrl": "https://www.youtube.com/@MrDsb", "subs": "76.7K Subs" },
+            { "name": "AyAmir", "logoUrl": "assets/trusted-brands/amir.jpg", "ytUrl": "https://www.youtube.com/@AyAmir.", "subs": "76.6K Subs" },
+            { "name": "Nova", "logoUrl": "assets/trusted-brands/nova.jpg", "ytUrl": "https://www.youtube.com/@TradeonNova", "subs": "63K Followers" },
+            { "name": "MrGreywolfvr", "logoUrl": "assets/trusted-brands/greywolf.jpg", "ytUrl": "https://www.youtube.com/@MrGreywolfvr", "subs": "61.5K Subs" },
+            { "name": "Vixerz", "logoUrl": "assets/trusted-brands/vixerz.jpg", "ytUrl": "https://www.youtube.com/@VixerzRBLX", "subs": "40.1K Subs" },
+            { "name": "NoobTM", "logoUrl": "assets/trusted-brands/noobtm.jpg", "ytUrl": "https://www.youtube.com/@noobtm", "subs": "35.2K Subs" },
+            { "name": "The Villain Catcher", "logoUrl": "assets/trusted-brands/the-villain-catcher.jpg", "ytUrl": "https://www.youtube.com/@TheVillainCatcher", "subs": "23.7K Subs" },
+            { "name": "MaskedPlayerVIP", "logoUrl": "assets/trusted-brands/maskedPlayer.jpg", "ytUrl": "https://www.youtube.com/@MaskedPlayerVIP", "subs": "18.1K Subs" },
+            { "name": "Animation Detective", "logoUrl": "assets/trusted-brands/animation-detective.jpg", "ytUrl": "https://www.youtube.com/@TheAnimationDetective", "subs": "7.9K Subs" },
+            { "name": "Joynul Abadin", "logoUrl": "assets/trusted-brands/channels4_profile.jpg", "ytUrl": "https://www.youtube.com/@Joynul_Abadin", "subs": "7.21K Subs" },
+            { "name": "CrayLabs", "logoUrl": "assets/trusted-brands/craylabs.jpg", "ytUrl": "https://www.youtube.com/@CrayLabs", "subs": "6.47K Subs" },
+            { "name": "JSevenOfficial", "logoUrl": "assets/trusted-brands/J7.jpg", "ytUrl": "https://www.youtube.com/@JSevenOfficial", "subs": "6.28K Subs" },
+            { "name": "Agent Stone", "logoUrl": "assets/trusted-brands/agent-stone.jpg", "ytUrl": "https://www.youtube.com/@AgentStoneYT", "subs": "Rising Stars" },
+            { "name": "MrTempoFitness", "logoUrl": "assets/trusted-brands/mrtempofitness.jpg", "ytUrl": "https://www.youtube.com/@MrTempoFitness", "subs": "Rising Stars" },
+            { "name": "chacer", "logoUrl": "assets/trusted-brands/chacer.jpg", "ytUrl": "https://www.youtube.com/@chacer", "subs": "Rising Stars" },
+            { "name": "CiofaloPlays", "logoUrl": "assets/trusted-brands/ciofaloplays.jpg", "ytUrl": "https://www.youtube.com/@CiofaloPlays", "subs": "Rising Stars" },
+            { "name": "TheToonTycoon", "logoUrl": "assets/trusted-brands/toonTycoon.jpg", "ytUrl": "https://www.youtube.com/@TheToonTycoon", "subs": "Rising Stars" }
         ]
     },
     "videoData": [
@@ -303,28 +129,8 @@
         "title": "Why Choose Us?",
         "subtitle": "A dedicated partner vs. the unpredictability of the open market.",
         "comparisonBoxes": [
-            {
-                "type": "pro",
-                "title": "With NY Studios",
-                "points": [
-                    "<strong>Consistent Quality:</strong> Get the same high-quality editing, style, and branding every single time.",
-                    "<strong>Dedicated Team:</strong> We understand your brand and vision, saving you time on repetitive explanations.",
-                    "<strong>Unlimited Revisions:</strong> We're not happy until you are. Your satisfaction is our priority.",
-                    "<strong>Reliable Turnaround:</strong> Predictable and fast delivery times so you can stick to your content schedule.",
-                    "<strong>All-in-One Service:</strong> Video editing, thumbnails, graphics, and strategy under one roof."
-                ]
-            },
-            {
-                "type": "con",
-                "title": "Hiring Freelancers / DIY",
-                "points": [
-                    "<strong>Inconsistent Results:</strong> Quality and style can vary wildly between different freelancers.",
-                    "<strong>Communication Hassles:</strong> Wasted time re-explaining your needs and brand for every new project.",
-                    "<strong>Limited Revisions:</strong> Often comes with extra costs or strict limits, forcing you to compromise.",
-                    "<strong>Unpredictable Availability:</strong> Freelancers can get busy or disappear, disrupting your workflow.",
-                    "<strong>Time Consuming:</strong> Juggling multiple people for different tasks or spending hours editing yourself."
-                ]
-            }
+            { "type": "pro", "title": "With NY Studios", "points": [ "<strong>Consistent Quality:</strong> Get the same high-quality editing, style, and branding every single time.", "<strong>Dedicated Team:</strong> We understand your brand and vision, saving you time on repetitive explanations.", "<strong>Unlimited Revisions:</strong> We're not happy until you are. Your satisfaction is our priority.", "<strong>Reliable Turnaround:</strong> Predictable and fast delivery times so you can stick to your content schedule.", "<strong>All-in-One Service:</strong> Video editing, thumbnails, graphics, and strategy under one roof." ] },
+            { "type": "con", "title": "Hiring Freelancers / DIY", "points": [ "<strong>Inconsistent Results:</strong> Quality and style can vary wildly between different freelancers.", "<strong>Communication Hassles:</strong> Wasted time re-explaining your needs and brand for every new project.", "<strong>Limited Revisions:</strong> Often comes with extra costs or strict limits, forcing you to compromise.", "<strong>Unpredictable Availability:</strong> Freelancers can get busy or disappear, disrupting your workflow.", "<strong>Time Consuming:</strong> Juggling multiple people for different tasks or spending hours editing yourself." ] }
         ]
     },
     "shortFormData": [
@@ -377,138 +183,34 @@
         { "title": "Client Thumbnail 33", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample33.jpg" }
     ],
     "testimonials": [
-        {
-            "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!",
-            "author": "Classified Sponge",
-            "subs": "1.22M Subs",
-            "avatarUrl": "assets/trusted-brands/classified-sponge.jpg"
-        },
-        {
-            "text": "The quality of the edits has had a direct positive impact on my viewer retention. Professional, creative, and a pleasure to work with.",
-            "author": "fiveay",
-            "subs": "342K Subs",
-            "avatarUrl": "assets/trusted-brands/fiveay.jpg"
-        },
-        {
-            "text": "humble and hardworking guy",
-            "author": "Marino",
-            "subs": "156K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/QImuf6LstUDyVLB85Lt6GW0IdARCq15nGwBG20Wx.jpg"
-        },
-        {
-            "text": "Did a great job editing my minecraft shorts! Great effects and did the style I was going for perfectly. Amazing turn around time and great communication, highly reccomend!",
-            "author": "davidfn",
-            "subs": "130K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/giyLftc5jWMnQlUm3OXmfXABjFtgNgr1C2BymGvS.jpg"
-        },
-        {
-            "text": "Great Editor",
-            "author": "Asbond",
-            "subs": "124K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/tcM9A7fUNf5ZXWUxnPdl1gGluP0rgswwwntEeK7P.jpg"
-        },
-        {
-            "text": "Incredible attention to detail and a keen understanding of what makes a video engaging. The team at NY Studios elevated my content to a new level.",
-            "author": "MerosRBX",
-            "subs": "109K Subs",
-            "avatarUrl": "assets/trusted-brands/merosrbx.jpg"
-        },
-        {
-            "text": "Communication was smooth and the final product was exactly what I was looking for. Their creative input was invaluable. Will definitely be working with them again.",
-            "author": "BeenTaken",
-            "subs": "100K Subs",
-            "avatarUrl": "assets/trusted-brands/beentaken.jpg"
-        },
-        {
-            "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!",
-            "author": "daaavidmc",
-            "subs": "88.4K Subs",
-            "avatarUrl": "assets/trusted-brands/daaavidmc.jpg"
-        },
-        {
-            "text": "The quality of the edits has had a direct positive impact on my viewer retention. Professional, creative, and a pleasure to work with.",
-            "author": "HISHAM",
-            "subs": "81.2K Subs",
-            "avatarUrl": "assets/trusted-brands/hisham.jpg"
-        },
-        {
-            "text": "Great Editor. Efficient and good communication. Def recommended",
-            "author": "Mr. Dsb",
-            "subs": "76.7K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/82CB90v5wm27ZImJekIIDDU4yBQkPDSePU5tnuz0.jpg"
-        },
-        {
-            "text": "Communication was smooth and the final product was exactly what I was looking for. Their creative input was invaluable. Will definitely be working with them again.",
-            "author": "Vixerz",
-            "subs": "40.1K Subs",
-            "avatarUrl": "assets/trusted-brands/vixerz.jpg"
-        },
-        {
-            "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!",
-            "author": "NoobTM",
-            "subs": "35.2K Subs",
-            "avatarUrl": "assets/trusted-brands/noobtm.jpg"
-        },
-        {
-            "text": "Labib is the best editor in the game. Not only does he make insane animations with 50% AVD's on 10 min videos and sometimes even better. He is also super fast and reliable. If a revision is needed he got it fixed like that. He also makes amazing thumbnails. He fully understands what makes a good thumbnail and edit. This is the perfect combination that will solve everything for you!",
-            "author": "Villain Catcher",
-            "subs": "23.7K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/eSkuoQCz0PePIZeBb0p2nUwIrUbmyVQGDnYdH76r.jpg"
-        },
-        {
-            "text": "Incredible attention to detail and a keen understanding of what makes a video engaging. The team at NY Studios elevated my content to a new level.",
-            "author": "Animation Detective",
-            "subs": "7.9K Subs",
-            "avatarUrl": "assets/trusted-brands/animation-detective.jpg"
-        },
-        {
-            "text": "I've worked with Mosfiqur for about 2 years, He edited all my Minecraft videos and many other projects with great skill and creativity. Always professional, reliable, and easy to communicate with. Highly recommended!",
-            "author": "Teachoble Bangla",
-            "subs": "7.34K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/DnAFgOnSVbq6hAa7pQ1Rgt7yiI8zGzJ11Ill2WUu.jpg"
-        },
-        {
-            "text": "Awesome editor! Made my gaming videos look super clean and fun to watch. Fast, easy to work with, and knows how to keep viewers hooked. Highly recommend!",
-            "author": "Joynul Abadin",
-            "subs": "7.21K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/DluTVjxNnJVdJIsEXQsu5H1hisw1gr65JKVl2O7t.jpg"
-        },
-        {
-            "text": "Very quick turnaround",
-            "author": "Cray",
-            "subs": "6.47K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/GNyNkXaQPjorSrr4B9yLzNNOHQiN9Ht2Yb0eg2TN.jpg"
-        },
-        {
-            "text": "quick turnaround time.",
-            "author": "J Seven",
-            "subs": "6.28K Subs",
-            "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/FCFUZ3JusgS64H4NXQbft63YRkrvMP2bYoqYzmxT.jpg"
-        },
-        {
-            "text": "Incredible attention to detail and a keen understanding of what makes a video engaging. The team at NY Studios elevated my content to a new level.",
-            "author": "Agent Stone",
-            "subs": "Rising Stars",
-            "avatarUrl": "assets/trusted-brands/agent-stone.jpg"
-        },
-        {
-            "text": "If you're looking for a reliable and talented editing team, look no further. NY Studios consistently delivers amazing work that my audience loves.",
-            "author": "MrTempoFitness",
-            "subs": "Rising Stars",
-            "avatarUrl": "assets/trusted-brands/mrtempofitness.jpg"
-        },
-        {
-            "text": "Communication was smooth and the final product was exactly what I was looking for. Their creative input was invaluable. Will definitely be working with them again.",
-            "author": "chacer",
-            "subs": "Rising Stars",
-            "avatarUrl": "assets/trusted-brands/chacer.jpg"
-        },
-        {
-            "text": "If you're looking for a reliable and talented editing team, look no further. NY Studios consistently delivers amazing work that my audience loves.",
-            "author": "CiofaloPlays",
-            "subs": "Rising Stars",
-            "avatarUrl": "assets/trusted-brands/ciofaloplays.jpg"
-        }
+        { "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!", "author": "Classified Sponge", "subs": "1.22M Subs", "avatarUrl": "assets/trusted-brands/classified-sponge.jpg" },
+        { "text": "NY Studios transformed my content. The editing is crisp, professional, and always delivered on time. My engagement has never been better!", "author": "kinGOPoLY", "subs": "672K Subs", "avatarUrl": "assets/trusted-brands/KinGopoly.jpg" },
+        { "text": "The quality of the edits has had a direct positive impact on my viewer retention. Professional, creative, and a pleasure to work with.", "author": "fiveay", "subs": "342K Subs", "avatarUrl": "assets/trusted-brands/fiveay.jpg" },
+        { "text": "humble and hardworking guy", "author": "Marino", "subs": "156K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/QImuf6LstUDyVLB85Lt6GW0IdARCq15nGwBG20Wx.jpg" },
+        { "text": "The team is incredibly talented and easy to work with. They understood my vision perfectly and brought it to life. A true partner in growth.", "author": "Rehan", "subs": "150K Subs", "avatarUrl": "assets/trusted-brands/jiILg0XB_400x400.jpg" },
+        { "text": "Did a great job editing my minecraft shorts! Great effects and did the style I was going for perfectly. Amazing turn around time and great communication, highly reccomend!", "author": "davidfn", "subs": "130K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/giyLftc5jWMnQlUm3OXmfXABjFtgNgr1C2BymGvS.jpg" },
+        { "text": "Great Editor", "author": "Asbond", "subs": "124K Subs", "avatarUrl": "https://storage.ytjobs.co/channel_thumbnails/tcM9A7fUNf5ZXWUxnPdl1gGluP0rgswwwntEeK7P.jpg" },
+        { "text": "Incredible attention to detail and a keen understanding of what makes a video engaging. The team at NY Studios elevated my content to a new level.", "author": "MerosRBX", "subs": "109K Subs", "avatarUrl": "assets/trusted-brands/merosrbx.jpg" },
+        { "text": "Communication was smooth and the final product was exactly what I was looking for. Their creative input was invaluable. Will definitely be working with them again.", "author": "BeenTaken", "subs": "100K Subs", "avatarUrl": "assets/trusted-brands/beentaken.jpg" },
+        { "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!", "author": "daaavidmc", "subs": "88.4K Subs", "avatarUrl": "assets/trusted-brands/daaavidmc.jpg" },
+        { "text": "The quality of the edits has had a direct positive impact on my viewer retention. Professional, creative, and a pleasure to work with.", "author": "HISHAM", "subs": "81.2K Subs", "avatarUrl": "assets/trusted-brands/hisham.jpg" },
+        { "text": "Great Editor. Efficient and good communication. Def recommended", "author": "Mr. Dsb", "subs": "76.7K Subs", "avatarUrl": "assets/trusted-brands/dsb.jpg" },
+        { "text": "Absolutely blown away by the quality. They are reliable, creative, and have a great eye for what works on YouTube. Highly recommend their services.", "author": "AyAmir", "subs": "76.6K Subs", "avatarUrl": "assets/trusted-brands/amir.jpg" },
+        { "text": "NY Studios transformed my content. The editing is crisp, professional, and always delivered on time. My engagement has never been better!", "author": "Nova", "subs": "63K Followers", "avatarUrl": "assets/trusted-brands/nova.jpg" },
+        { "text": "The team is incredibly talented and easy to work with. They understood my vision perfectly and brought it to life. A true partner in growth.", "author": "MrGreywolfvr", "subs": "61.5K Subs", "avatarUrl": "assets/trusted-brands/greywolf.jpg" },
+        { "text": "Communication was smooth and the final product was exactly what I was looking for. Their creative input was invaluable. Will definitely be working with them again.", "author": "Vixerz", "subs": "40.1K Subs", "avatarUrl": "assets/trusted-brands/vixerz.jpg" },
+        { "text": "Working with NY Studios was a game-changer for my channel. Their editing quality is top-notch and they delivered faster than expected. Highly recommended!", "author": "NoobTM", "subs": "35.2K Subs", "avatarUrl": "assets/trusted-brands/noobtm.jpg" },
+        { "text": "Labib is the best editor in the game. He fully understands what makes a good thumbnail and edit. This is the perfect combination that will solve everything for you!", "author": "The Villain Catcher", "subs": "23.7K Subs", "avatarUrl": "assets/trusted-brands/the-villain-catcher.jpg" },
+        { "text": "Absolutely blown away by the quality. They are reliable, creative, and have a great eye for what works on YouTube. Highly recommend their services.", "author": "MaskedPlayerVIP", "subs": "18.1K Subs", "avatarUrl": "assets/trusted-brands/maskedPlayer.jpg" },
+        { "text": "Incredible attention to detail and a keen understanding of what makes a video engaging. The team at NY Studios elevated my content to a new level.", "author": "Animation Detective", "subs": "7.9K Subs", "avatarUrl": "assets/trusted-brands/animation-detective.jpg" },
+        { "text": "Awesome editor! Made my gaming videos look super clean and fun to watch. Fast, easy to work with, and knows how to keep viewers hooked. Highly recommend!", "author": "Joynul Abadin", "subs": "7.21K Subs", "avatarUrl": "assets/trusted-brands/channels4_profile.jpg" },
+        { "text": "Very quick turnaround", "author": "CrayLabs", "subs": "6.47K Subs", "avatarUrl": "assets/trusted-brands/craylabs.jpg" },
+        { "text": "quick turnaround time.", "author": "JSevenOfficial", "subs": "6.28K Subs", "avatarUrl": "assets/trusted-brands/J7.jpg" },
+        { "text": "Incredible attention to detail and a keen understanding of what makes a video engaging. The team at NY Studios elevated my content to a new level.", "author": "Agent Stone", "subs": "Rising Stars", "avatarUrl": "assets/trusted-brands/agent-stone.jpg" },
+        { "text": "If you're looking for a reliable and talented editing team, look no further. NY Studios consistently delivers amazing work that my audience loves.", "author": "MrTempoFitness", "subs": "Rising Stars", "avatarUrl": "assets/trusted-brands/mrtempofitness.jpg" },
+        { "text": "Communication was smooth and the final product was exactly what I was looking for. Their creative input was invaluable. Will definitely be working with them again.", "author": "chacer", "subs": "Rising Stars", "avatarUrl": "assets/trusted-brands/chacer.jpg" },
+        { "text": "If you're looking for a reliable and talented editing team, look no further. NY Studios consistently delivers amazing work that my audience loves.", "author": "CiofaloPlays", "subs": "Rising Stars", "avatarUrl": "assets/trusted-brands/ciofaloplays.jpg" },
+        { "text": "NY Studios transformed my content. The editing is crisp, professional, and always delivered on time. My engagement has never been better!", "author": "TheToonTycoon", "subs": "Rising Stars", "avatarUrl": "assets/trusted-brands/toonTycoon.jpg" }
     ],
     "faq": [
         { "question": "What is NY Studios?", "answer": "NY Studios is a creative agency that focuses on video editing, thumbnails, and channel management." },

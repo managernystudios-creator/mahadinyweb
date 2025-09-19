@@ -103,7 +103,7 @@ class ArtworkFilter {
                 } else if (this.filterState === 'thumbnails') {
                     this.filterState = 'graphics';
                     this.currentFilter = 'graphics';
-                    button.textContent = 'thumbnails';
+                    button.textContent = 'Thumbnails';
                     this.filterArtwork(this.currentFilter);
                     this.artworkGrid.classList.remove('hidden');
                 } else { // filterState is 'graphics'

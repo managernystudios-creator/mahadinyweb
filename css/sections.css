@@ -149,17 +149,27 @@
 }
 
 @media (max-width: 480px) {
+    /* Move social links above founder info */
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+    }
     .social-links {
+        order: 1;
         grid-template-columns: 1fr;
         gap: 8px;
+        margin-bottom: 30px;
     }
-    .social-link { 
-        padding: 8px 12px; 
-        font-size: 12px; 
+    .founder-info {
+        order: 2;
+    }
+    .social-link {
+        padding: 8px 12px;
+        font-size: 12px;
         justify-content: center;
     }
-    .social-text { 
-        font-size: 12px; 
+    .social-text {
+        font-size: 12px;
         max-width: 100%;
     }
 }

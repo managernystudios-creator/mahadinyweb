@@ -643,7 +643,7 @@
                     "socials":  [
                                     {
                                         "title":  "X (Twitter)",
-                                        "iconClass":  "fa fa-twitter",
+                                        "iconClass":  "fa-brands fa-x-twitter",
                                         "url":  "https://x.com/nystudios1"
                                     },
                                     {

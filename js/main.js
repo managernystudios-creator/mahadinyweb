@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
             populateWhyUs(config.whyUs);
             populateContact(config.contact);
             populateShortForm(config.shortFormData);
-            
+
+            // Initialize artwork filter after graphics are populated
+            if (document.getElementById('artwork-grid')) {
+                new ArtworkFilter();
+            }
+
             // Initialize all the dynamic components
             initializePage(config);
         })

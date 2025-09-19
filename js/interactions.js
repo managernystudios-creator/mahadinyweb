@@ -78,29 +78,61 @@ class Navigation {
 class ArtworkFilter {
     constructor() {
         this.filterButtons = document.querySelectorAll('.filter-btn');
-        this.artworkCards = document.querySelectorAll('.artwork-card');
-        
+        this.artworkGrid = document.getElementById('artwork-grid');
+        this.artworkCards = []; // Initialize as empty, will be populated dynamically
+        this.filterState = 'hidden'; // possible states: hidden, thumbnails, graphics
+        this.currentFilter = 'thumbnails';
+
         this.init();
     }
-    
+
     init() {
         this.setupEventListeners();
+        this.artworkGrid.classList.add('hidden');
     }
-    
+
     setupEventListeners() {
         this.filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                this.filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                const filter = button.getAttribute('data-filter');
-                this.filterArtwork(filter);
+                if (this.filterState === 'hidden') {
+                    this.filterState = 'thumbnails';
+                    this.currentFilter = 'thumbnails';
+                    button.textContent = 'Thumbnails';
+                    this.filterArtwork(this.currentFilter);
+                    this.artworkGrid.classList.remove('hidden');
+                } else if (this.filterState === 'thumbnails') {
+                    this.filterState = 'graphics';
+                    this.currentFilter = 'graphics';
+                    button.textContent = 'thumbnails';
+                    this.filterArtwork(this.currentFilter);
+                    this.artworkGrid.classList.remove('hidden');
+                } else { // filterState is 'graphics'
+                this.filterState = 'hidden';
+                button.textContent = 'Thumbnails';
+                this.artworkGrid.classList.add('hidden');
+            }
+
+                this.updateButtonStates();
             });
         });
     }
-    
+
+    updateButtonStates() {
+        this.filterButtons.forEach(btn => {
+            if (this.filterState !== 'hidden') {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+
     filterArtwork(filter) {
+        // Always re-select cards to get the latest set
+        this.artworkCards = document.querySelectorAll('.artwork-card');
         this.artworkCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            const category = card.getAttribute('data-category');
+            if (category === filter) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';
@@ -224,4 +256,3 @@ function initializeInteractions() {
 
 // Make toggleFAQ globally available for onclick attributes
 window.toggleFAQ = toggleFAQ;
-

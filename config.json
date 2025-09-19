@@ -182,12 +182,12 @@
         { "title": "Client Thumbnail 31", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample31.jpg" },
         { "title": "Client Thumbnail 32", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample32.jpg" },
         { "title": "Client Thumbnail 33", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample33.jpg" },
-        { "title": "Client Thumbnail 24", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample34.jpg" },
-        { "title": "Client Thumbnail 25", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample35.jpg" },
-        { "title": "Client Thumbnail 26", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample36.jpg" },
-        { "title": "Client Thumbnail 27", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample37.jpg" },
-        { "title": "Client Thumbnail 28", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample38.jpg" },
-        { "title": "Client Thumbnail 29", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample39.jpg" }
+        { "title": "Client Thumbnail 34", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample34.jpg" },
+        { "title": "Client Thumbnail 35", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample35.jpg" },
+        { "title": "Client Thumbnail 36", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample36.jpg" },
+        { "title": "Client Thumbnail 37", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample37.jpg" },
+        { "title": "Client Thumbnail 38", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample38.jpg" },
+        { "title": "Client Thumbnail 39", "category": "thumbnails", "imageUrl": "assets/thumbnails/sample39.jpg" }
        
     ],
     "testimonials": [

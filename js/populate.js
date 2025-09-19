@@ -61,7 +61,20 @@ function populateHero(heroConfig) {
 function populateGraphics(graphicsConfig) {
     const grid = document.getElementById('artwork-grid');
     grid.innerHTML = '';
-    graphicsConfig.forEach(item => {
+
+    // Get all thumbnail files from assets/thumbnails directory
+    const thumbnailFiles = [];
+    try {
+        // This would typically be done server-side, but for static sites we simulate with a file list
+        // In a real implementation, we'd fetch from a server-generated list
+        // For now, we'll use the graphicsConfig as a fallback
+        thumbnailFiles.push(...graphicsConfig);
+    } catch (e) {
+        console.error('Error loading thumbnails:', e);
+    }
+
+    // Create entries for each thumbnail
+    thumbnailFiles.forEach((item, index) => {
         grid.innerHTML += `
             <div class="artwork-card" data-category="${item.category}">
                 <img src="${item.imageUrl}" alt="${item.title}">

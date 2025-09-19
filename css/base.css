@@ -54,7 +54,7 @@ body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); 
 .py-4 { padding: 1rem 0; }
 .py-20 { padding: 5rem 0; }
 .p-6 { padding: 1.5rem; }
-.p-8 { padding: 2rem; }
+.p-8 { padding: 0.8rem; }
 .text-xl { font-size: 1.25rem; }
 .text-2xl { font-size: 1.5rem; }
 .text-3xl { font-size: 1.875rem; }

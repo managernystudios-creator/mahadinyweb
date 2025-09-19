@@ -19,8 +19,8 @@
 .filter-btn { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); border: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 .filter-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
 .filter-btn.active { background: hsl(var(--accent)); box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); }
-.artwork-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-.artwork-card { border-radius: var(--radius); overflow: hidden; position: relative; height: 250px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.3s ease; background: hsl(var(--card)); border: 1px solid hsl(var(--border)); }
+.artwork-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.artwork-card { border-radius: var(--radius); overflow: hidden; position: relative; height: 260px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: all 0.3s ease; background: hsl(var(--card)); border: 1px solid hsl(var(--border)); }
 .artwork-card:hover { transform: translateY(-10px); box-shadow: 0 20px 30px rgba(0,0,0,0.25); }
 .artwork-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .artwork-card:hover img { transform: scale(1.05); }
@@ -58,7 +58,7 @@
 .rating { color: gold; margin-top: 0.5rem; font-size: 0.9rem; }
 
 /* FAQ */
-.faq-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+.faq-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 1000px; margin: 0 auto; }
 /* Center the FAQ title */
 #faq .section-title { text-align: center; }
 .faq-item { background: var(--glass-bg); padding: 25px; border-radius: 15px; border: 1px solid var(--glass-border); cursor: pointer; transition: all 0.3s; }
@@ -75,7 +75,7 @@
 .contact-header { text-align: center; margin-bottom: 50px; }
 .contact-header h2 { font-size: 48px; margin-bottom: 10px; color: hsl(var(--foreground)); }
 .contact-subtitle { color: hsl(var(--muted-foreground)); font-size: 18px; max-width: 600px; margin: 0 auto; }
-.contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; }
 .founder-info { display: flex; align-items: start; gap: 20px; }
 .founder-avatar { width: 120px; height: 120px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))); display: flex; align-items: center; justify-content: center; font-size: 44px; font-weight: bold; color: hsl(var(--primary-foreground)); }
 .founder-details h3 { font-size: 24px; margin-bottom: 5px; color: hsl(var(--foreground)); }

@@ -1,4 +1,4 @@
-﻿{
+{
     "siteTitle":  "NY Studios",
     "siteLogoUrl":  "assets/ny_3.png",
     "siteLogoHeight":  "70px",
@@ -75,12 +75,12 @@
                                    "title":  "Adobe Photoshop",
                                    "className":  "ps"
                                },
-                              {
-                                  "label":  "Ai",
-                                  "title":  "Adobe Illustrator",
-                                  "className":  "ai",
-                                  "iconUrl": "assets/tools/adobe-illustrator.svg"
-                              },
+                               {
+                                   "label":  "Ai",
+                                   "title":  "Adobe Illustrator",
+                                   "className":  "ai",
+                                   "iconUrl":  "assets/tools/adobe-illustrator.svg"
+                               },
                                {
                                    "label":  "Id",
                                    "title":  "Adobe InDesign",
@@ -463,35 +463,81 @@
                       ],
     "graphics":  [
                      {
+                         "title":  "Client Thumbnail 1",
                          "category":  "thumbnails",
-                         "imageUrl":  "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto=format\u0026fit=crop\u0026w=600\u0026h=400\u0026q=80",
-                         "title":  "Vlog Thumbnail",
-                         "description":  "Eye-catching design for maximum click-through"
+                         "imageUrl":  "assets/thumbnails/sample1.png"
                      },
                      {
+                         "title":  "Client Thumbnail 2",
                          "category":  "thumbnails",
-                         "imageUrl":  "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto=format\u0026fit=crop\u0026w=600\u0026h=400\u0026q=80",
-                         "title":  "Retro Gaming Thumbnail",
-                         "description":  "Vibrant colors for gaming content"
+                         "imageUrl":  "assets/thumbnails/sample2.png"
                      },
                      {
-                         "category":  "graphics",
-                         "imageUrl":  "https://images.unsplash.com/photo-1633287387306-f08b4b3671c6?ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto=format\u0026fit=crop\u0026w=600\u0026h=400\u0026q=80",
-                         "title":  "Product Visualization",
-                         "description":  "Realistic 3D product rendering"
-                     },
-                     {
+                         "title":  "Client Thumbnail 3",
                          "category":  "thumbnails",
-                         "imageUrl":  "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto=format\u0026fit=crop\u0026w=600\u0026h=400\u0026q=80",
-                         "title":  "eSports Event Thumbnail",
-                         "description":  "High-energy design for competitive gaming"
+                         "imageUrl":  "assets/thumbnails/sample3.png"
                      },
                      {
-                         "category":  "graphics",
-                         "imageUrl":  "https://images.unsplash.com/photo-1593405431388-693a02245678?ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto=format\u0026fit=crop\u0026w=600\u0026h=400\u0026q=80",
-                         "title":  "Abstract Background",
-                         "description":  "Modern 3D abstract graphic for branding"
-                     }
+                         "title":  "Client Thumbnail 4",
+                         "category":  "thumbnails",
+                         "imageUrl":  "assets/thumbnails/sample4.png"
+                     },
+                     {
+                         "title":  "Client Thumbnail 5",
+                         "category":  "thumbnails",
+                         "imageUrl":  "assets/thumbnails/sample5.png"
+                     },
+                     {
+                         "title":  "Client Thumbnail 6",
+                         "category":  "thumbnails",
+                         "imageUrl":  "assets/thumbnails/sample6.png"
+                     },
+                     {  
+                        "title": "Client Thumbnail 7",
+                        "category": "thumbnails",
+                        "imageUrl": "assets/thumbnails/sample7.png"
+                     },
+                        {  
+                            "title": "Client Thumbnail 8",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample8.png"
+                        },
+                        {  
+                            "title": "Client Thumbnail 9",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample9.png"
+                        },
+                        {  
+                            "title": "Client Thumbnail 10",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample10.png"
+                        },
+                        {  
+                            "title": "Client Thumbnail 11",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample11.jpg"
+                        },
+                        {  
+                            "title": "Client Thumbnail 12",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample12.jpg"
+                        },
+                        {  
+                            "title": "Client Thumbnail 13",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample13.jpg"
+                        },
+                        {  
+                            "title": "Client Thumbnail 14",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample14.jpg"
+                        },
+                        {  
+                            "title": "Client Thumbnail 15",
+                            "category": "thumbnails",
+                            "imageUrl": "assets/thumbnails/sample15.jpg"
+                        }
+
                  ],
     "testimonials":  [
                          {
@@ -573,8 +619,8 @@
                     "answer":  "We take 50% upfront payment before starting a project. This secures your spot in our workflow and motivates us to deliver with extra care and efficiency."
                 },
                 {
-                    "question":  "Whatâ€™s your refund policy?",
-                    "answer":  "We donâ€™t offer refunds unless we cancel a project from our end. Please confirm all details before placing your order."
+                    "question":  "What’s your refund policy?",
+                    "answer":  "We don’t offer refunds unless we cancel a project from our end. Please confirm all details before placing your order."
                 },
                 {
                     "question":  "How big is your team?",
@@ -582,18 +628,18 @@
                 },
                 {
                     "question":  "What is your usual turnaround time?",
-                    "answer":  "For standard YouTube videos, our typical turnaround is 3-5 business days. Larger or more complex projects may take longer, but weâ€™ll always communicate timelines clearly."
+                    "answer":  "For standard YouTube videos, our typical turnaround is 3-5 business days. Larger or more complex projects may take longer, but we’ll always communicate timelines clearly."
                 },
                 {
                     "question":  "How can I order your services?",
-                    "answer":  "The best way is to email us directlyâ€”thatâ€™s our most reliable contact method. You can also reach out via Twitter or Instagram if thatâ€™s easier for you. Once we receive your message, weâ€™ll get back to you as soon as possible to discuss your project."
+                    "answer":  "The best way is to email us directly—that’s our most reliable contact method. You can also reach out via Twitter or Instagram if that’s easier for you. Once we receive your message, we’ll get back to you as soon as possible to discuss your project."
                 }
             ],
     "contact":  {
                     "name":  "Labib | TheVinzo",
                     "role":  "Founder",
                     "avatarUrl":  "assets/480753378_1210371713785456_1385830953685240733_n.png",
-                    "bio":  "When I started this agency, my goal was simple: to bring reliability back into video editing. These days, finding a good editor isnâ€™t the problem, finding a reliable one is. Too often, creators are left hanging when editors disappear without notice. I wanted to change that.\n\nAs a YouTuber myself, with experience managing and growing multiple successful channels, I understand how much effort goes into creating content that actually works with YouTubeâ€™s algorithm. Thatâ€™s why at our agency, we donâ€™t just edit videos, we analyze your channel, your audience, and your content strategy first. Editing is only part of the process. Our real focus is conversion: turning casual viewers into loyal subscribers and customers.\n\nI also believe that quality editing shouldnâ€™t come at an unreasonable price. Thatâ€™s why we built our agency around providing the best value-for-money services in the market, premium-level editing that helps your channel grow without breaking your budget.\n\nWe donâ€™t just edit. We help you grow.",
+                    "bio":  "When I started this agency, my goal was simple: to bring reliability back into video editing. These days, finding a good editor isn’t the problem, finding a reliable one is. Too often, creators are left hanging when editors disappear without notice. I wanted to change that.\n\nAs a YouTuber myself, with experience managing and growing multiple successful channels, I understand how much effort goes into creating content that actually works with YouTube’s algorithm. That’s why at our agency, we don’t just edit videos, we analyze your channel, your audience, and your content strategy first. Editing is only part of the process. Our real focus is conversion: turning casual viewers into loyal subscribers and customers.\n\nI also believe that quality editing shouldn’t come at an unreasonable price. That’s why we built our agency around providing the best value-for-money services in the market, premium-level editing that helps your channel grow without breaking your budget.\n\nWe don’t just edit. We help you grow.",
                     "socials":  [
                                     {
                                         "title":  "X (Twitter)",

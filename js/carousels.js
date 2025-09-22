@@ -37,7 +37,7 @@ class Carousel3D {
                 if (this.selectedCategory === category) {
                     this.closeVideoCarousel();
                 } else {
-                    this.openVideoCarousel(category);
+                    this.openVideoCarousel(category); // This will scroll by default
                 }
             });
         });
@@ -159,7 +159,8 @@ class Carousel3D {
         }
     }
     
-    openVideoCarousel(category) {
+    // --- CHANGE 1: Added 'shouldScroll' parameter with a default value of true ---
+    openVideoCarousel(category, shouldScroll = true) {
         this.selectedCategory = category;
         this.categoryButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.category === category);
@@ -173,7 +174,11 @@ class Carousel3D {
         this.initCarousel3D(videosForCategory, startIndex);
         
         this.videoCarouselContainer.classList.remove('hidden');
-        this.videoCarouselContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // --- CHANGE 2: Only scroll if 'shouldScroll' is true ---
+        if (shouldScroll) {
+            this.videoCarouselContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     }
     
     closeVideoCarousel() {
@@ -456,7 +461,7 @@ function initializeCarousels(videoData) {
     
     // Auto-open Documentary category by default
     setTimeout(() => {
-        carousel3D.openVideoCarousel('Documentary');
+        // --- CHANGE 3: Pass 'false' to prevent scrolling on initial load ---
+        carousel3D.openVideoCarousel('Documentary', false);
     }, 100);
 }
-
